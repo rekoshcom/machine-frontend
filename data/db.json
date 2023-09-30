@@ -1,0 +1,4572 @@
+{
+    "auth-refresh": {},
+    "auth-register": {
+      "email": "test2@gmail.com",
+      "email_confirm": "test2@gmail.com",
+      "password": "nemoNemo1234"
+    },
+    "auth-login": {
+      "email_or_username": "test2@gmail.com",
+      "password": "nemoNemo1234"
+    },
+    "auth-login-facebook": {
+      "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDM3Nzg4OCwianRpIjoiZmVlOWE2NWUtMGUzOC00NjJmLWI4M2ItNmFjYTgyM2YzMzc5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6OCwibmJmIjoxNjY0Mzc3ODg4LCJleHAiOjE2NjQzNzgwMDgsImZpbmdlcnByaW50Ijp7Im9zIjoiTWFjIE9TIFgiLCJkZXZpY2UiOiJNYWMiLCJkb21haW4iOiIxMjcuMC4wLjEiLCJicm93c2VyIjoiQ2hyb21lIiwidGltZXN0YW1wIjoxNjY0Mzc3ODg4fX0.cGsBuBXvDlosd340id9cpCBJOvoehk5XIDjF8fxZ88Y",
+      "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDM3Nzg4OCwianRpIjoiOGIyMWE0MDQtYzUzYy00NGE3LThkY2YtMmEwM2ZmN2M0MzAyIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjgsIm5iZiI6MTY2NDM3Nzg4OCwiZXhwIjoxNjY0MzgxNDg4LCJmaW5nZXJwcmludCI6eyJvcyI6Ik1hYyBPUyBYIiwiZGV2aWNlIjoiTWFjIiwiZG9tYWluIjoiMTI3LjAuMC4xIiwiYnJvd3NlciI6IkNocm9tZSIsInRpbWVzdGFtcCI6MTY2NDM3Nzg4OH19.6sYSWaeSfotwqcgtz7VGDJIU0ow2llPBXL54Vda3WnA"
+    },
+    "auth-login-google": {
+      "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDM3Nzg4OCwianRpIjoiZmVlOWE2NWUtMGUzOC00NjJmLWI4M2ItNmFjYTgyM2YzMzc5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6OCwibmJmIjoxNjY0Mzc3ODg4LCJleHAiOjE2NjQzNzgwMDgsImZpbmdlcnByaW50Ijp7Im9zIjoiTWFjIE9TIFgiLCJkZXZpY2UiOiJNYWMiLCJkb21haW4iOiIxMjcuMC4wLjEiLCJicm93c2VyIjoiQ2hyb21lIiwidGltZXN0YW1wIjoxNjY0Mzc3ODg4fX0.cGsBuBXvDlosd340id9cpCBJOvoehk5XIDjF8fxZ88Y",
+      "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDM3Nzg4OCwianRpIjoiOGIyMWE0MDQtYzUzYy00NGE3LThkY2YtMmEwM2ZmN2M0MzAyIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjgsIm5iZiI6MTY2NDM3Nzg4OCwiZXhwIjoxNjY0MzgxNDg4LCJmaW5nZXJwcmludCI6eyJvcyI6Ik1hYyBPUyBYIiwiZGV2aWNlIjoiTWFjIiwiZG9tYWluIjoiMTI3LjAuMC4xIiwiYnJvd3NlciI6IkNocm9tZSIsInRpbWVzdGFtcCI6MTY2NDM3Nzg4OH19.6sYSWaeSfotwqcgtz7VGDJIU0ow2llPBXL54Vda3WnA"
+    },
+    "auth-login-twitter": {
+      "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDM3Nzg4OCwianRpIjoiZmVlOWE2NWUtMGUzOC00NjJmLWI4M2ItNmFjYTgyM2YzMzc5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6OCwibmJmIjoxNjY0Mzc3ODg4LCJleHAiOjE2NjQzNzgwMDgsImZpbmdlcnByaW50Ijp7Im9zIjoiTWFjIE9TIFgiLCJkZXZpY2UiOiJNYWMiLCJkb21haW4iOiIxMjcuMC4wLjEiLCJicm93c2VyIjoiQ2hyb21lIiwidGltZXN0YW1wIjoxNjY0Mzc3ODg4fX0.cGsBuBXvDlosd340id9cpCBJOvoehk5XIDjF8fxZ88Y",
+      "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDM3Nzg4OCwianRpIjoiOGIyMWE0MDQtYzUzYy00NGE3LThkY2YtMmEwM2ZmN2M0MzAyIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjgsIm5iZiI6MTY2NDM3Nzg4OCwiZXhwIjoxNjY0MzgxNDg4LCJmaW5nZXJwcmludCI6eyJvcyI6Ik1hYyBPUyBYIiwiZGV2aWNlIjoiTWFjIiwiZG9tYWluIjoiMTI3LjAuMC4xIiwiYnJvd3NlciI6IkNocm9tZSIsInRpbWVzdGFtcCI6MTY2NDM3Nzg4OH19.6sYSWaeSfotwqcgtz7VGDJIU0ow2llPBXL54Vda3WnA"
+    },
+    "auth-login-secure": {
+      "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDM3Nzg4OCwianRpIjoiZmVlOWE2NWUtMGUzOC00NjJmLWI4M2ItNmFjYTgyM2YzMzc5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6OCwibmJmIjoxNjY0Mzc3ODg4LCJleHAiOjE2NjQzNzgwMDgsImZpbmdlcnByaW50Ijp7Im9zIjoiTWFjIE9TIFgiLCJkZXZpY2UiOiJNYWMiLCJkb21haW4iOiIxMjcuMC4wLjEiLCJicm93c2VyIjoiQ2hyb21lIiwidGltZXN0YW1wIjoxNjY0Mzc3ODg4fX0.cGsBuBXvDlosd340id9cpCBJOvoehk5XIDjF8fxZ88Y",
+      "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDM3Nzg4OCwianRpIjoiOGIyMWE0MDQtYzUzYy00NGE3LThkY2YtMmEwM2ZmN2M0MzAyIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjgsIm5iZiI6MTY2NDM3Nzg4OCwiZXhwIjoxNjY0MzgxNDg4LCJmaW5nZXJwcmludCI6eyJvcyI6Ik1hYyBPUyBYIiwiZGV2aWNlIjoiTWFjIiwiZG9tYWluIjoiMTI3LjAuMC4xIiwiYnJvd3NlciI6IkNocm9tZSIsInRpbWVzdGFtcCI6MTY2NDM3Nzg4OH19.6sYSWaeSfotwqcgtz7VGDJIU0ow2llPBXL54Vda3WnA"
+    },
+    "auth-logout": [],
+    "auth-validate-login-secure-key": {
+      "expires_in": 300,
+      "is_two_fa_enabled": true,
+      "is_security_question_enabled": true
+    },
+    "auth-verify-email": [],
+    "auth-forgotten-password": [],
+    "auth-reset-password": [],
+    "auth-revoke-tokens": [],
+    "profile": {
+      "username": "Pavel Tashev",
+      "email": "p.d.tashev@gmail.com",
+      "locale": "en-UK",
+      "picture_url": "https://www.picture.com",
+      "timezone_id": 1,
+      "timezone_utc_offset": 180,
+      "currency_code": "GBP",
+      "crypto": {
+        "btc": "SOME_ADDRESS"
+      },
+      "unread_messages": 3,
+      "is_email_verified": true,
+      "is_two_fa_enabled": true,
+      "is_security_question_enabled": true,
+      "is_social_account": true
+    },
+    "winners": [
+      {
+        "id": 1,
+        "user_name": "TheGreatArchitect",
+        "user_image": "https://xsgames.co/randomusers/avatar.php?g=pixel",
+        "when": "21th Jun, 2022",
+        "game_name": "Bitcoin Lotto",
+        "amount_won": {
+          "crypto": {
+            "code": "BTC",
+            "value": 500
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 14500000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 15000000
+            }
+          }
+        }
+      },
+      {
+        "id": 2,
+        "user_name": "The Black Swan",
+        "user_image": "https://xsgames.co/randomusers/avatar.php?g=pixel",
+        "when": "14th Dec, 2021",
+        "game_name": "Bitcoin Lotto",
+        "amount_won": {
+          "crypto": {
+            "code": "BTC",
+            "value": 1100
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 102300000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 110000000
+            }
+          }
+        }
+      },
+      {
+        "id": 3,
+        "user_name": "Zero234",
+        "user_image": "https://xsgames.co/randomusers/avatar.php?g=pixel",
+        "when": "3th Aug, 2021",
+        "game_name": "Bitcoin Lotto",
+        "amount_won": {
+          "crypto": {
+            "code": "BTC",
+            "value": 300
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 10800000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 12000000
+            }
+          }
+        }
+      },
+      {
+        "id": 4,
+        "user_name": "Bitcoin Fan",
+        "user_image": "https://xsgames.co/randomusers/avatar.php?g=pixel",
+        "when": "13th Jan, 2021",
+        "game_name": "Bitcoin Lotto",
+        "amount_won": {
+          "crypto": {
+            "code": "BTC",
+            "value": 700
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 15800000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 16000000
+            }
+          }
+        }
+      },
+      {
+        "id": 5,
+        "user_name": "Hugo Boss",
+        "user_image": "https://xsgames.co/randomusers/avatar.php?g=pixel",
+        "when": "10th Sep, 2020",
+        "game_name": "Bitcoin Lotto",
+        "amount_won": {
+          "crypto": {
+            "code": "BTC",
+            "value": 50
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 8100000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 9000000
+            }
+          }
+        }
+      },
+      {
+        "id": 6,
+        "user_name": "Nick Granger",
+        "user_image": "https://xsgames.co/randomusers/avatar.php?g=pixel",
+        "when": "7th Jul, 2020",
+        "game_name": "Bitcoin Lotto",
+        "amount_won": {
+          "crypto": {
+            "code": "BTC",
+            "value": 700
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 234900000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 240000000
+            }
+          }
+        }
+      },
+      {
+        "id": 7,
+        "user_name": "Peter Southern",
+        "user_image": "https://xsgames.co/randomusers/avatar.php?g=pixel",
+        "when": "29th Nov, 2019",
+        "game_name": "Bitcoin Lotto",
+        "amount_won": {
+          "crypto": {
+            "code": "BTC",
+            "value": 50
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 5900000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 6000000
+            }
+          }
+        }
+      },
+      {
+        "id": 8,
+        "user_name": "Nebula",
+        "user_image": "https://xsgames.co/randomusers/avatar.php?g=pixel",
+        "when": "1th May, 2019",
+        "game_name": "Bitcoin Lotto",
+        "amount_won": {
+          "crypto": {
+            "code": "BTC",
+            "value": 230
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 17700000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 19000000
+            }
+          }
+        }
+      }
+    ],
+    "causes": [
+      {
+        "id": 1,
+        "title": "British Red Cross",
+        "description": "The British Red Cross Society is the United Kingdom body of the worldwide neutral and impartial humanitarian network the International Red Cross and Red Crescent Movement.",
+        "image": "/static/media/red-cross.e3f382bd15421844d705.jpeg",
+        "link": "#"
+      },
+      {
+        "id": 2,
+        "title": "World Food Programme",
+        "description": "The World Food Programme is the food-assistance branch of the United Nations. It is the world's largest humanitarian organization focused on hunger and food security, and the largest provider of school meals.",
+        "image": "/static/media/world-food-program.c7c43543df08be8a13aa.jpeg",
+        "link": "#"
+      },
+      {
+        "id": 3,
+        "title": "Save the Children",
+        "description": "Save the Children, was established in the United Kingdom in 1919 to improve the lives of children through better education, health care, and economic opportunities, as well as providing emergency aid in natural disasters, war, and other conflicts.",
+        "image": "/static/media/save-the-children.388dda33403fa8ab8a45.jpeg",
+        "link": "#"
+      }
+    ],
+    "countries": [
+      {
+        "id": 1,
+        "name": "Argentina"
+      },
+      {
+        "id": 2,
+        "name": "Bulgaria"
+      },
+      {
+        "id": 3,
+        "name": "Isle of Man"
+      }
+    ],
+    "timezones": [
+      {
+        "id": 1,
+        "label": "America/Argentina/Ushuaia (-03:00 GMT)",
+        "utc_offset": -3
+      },
+      {
+        "id": 2,
+        "label": "Africa/Accra (+00:00 GMT)",
+        "utc_offset": 0
+      }
+    ],
+    "currencies": [
+      {
+        "id": 1,
+        "code": "GBP"
+      },
+      {
+        "id": 2,
+        "code": "USD"
+      },
+      {
+        "id": 3,
+        "code": "EUR"
+      }
+    ],
+    "security-questions": [
+      {
+        "id": 1,
+        "question": "What is your mother's maiden name?"
+      },
+      {
+          "id": 2,
+          "question": "What is your place of birth?"
+      },
+      {
+          "id": 3,
+          "question": "What is the name of your first pet?"
+      },
+      {
+          "id": 4,
+          "question": "What is your favorite color?"
+      },
+      {
+          "id": 5,
+          "question": "What is your favorite movie?"
+      },
+      {
+          "id": 6,
+          "question": "What is the name of your high school?"
+      },
+      {
+          "id": 7,
+          "question": "What is your favorite food?"
+      },
+      {
+          "id": 8,
+          "question": "What is your favorite book?"
+      },
+      {
+          "id": 9,
+          "question": "What is your favorite quote?"
+      }
+    ],
+    "contact": {
+      "name": "Pavel Tashev",
+      "email": "wishawalk@gmail.com",
+      "country_id": "Bulgaria",
+      "message": "ni"
+    },
+    "games": [
+      {
+        "id": 1,
+        "name": "Bitcoin Lotto",
+        "key": "bitcoin-lotto",
+        "color": "redish",
+        "sets": [
+          {
+            "n": 6,
+            "N": 49
+          }
+        ],
+        "advanced_ticket_purchase": {
+          "days": [
+            {
+              "day": 1,
+              "time_delta_midnight_utc": 72000
+            },
+            {
+              "day": 3,
+              "time_delta_midnight_utc": 72000
+            },
+            {
+              "day": 4,
+              "time_delta_midnight_utc": 72000
+            },
+            {
+              "day": 5,
+              "time_delta_midnight_utc": 72000
+            }
+          ],
+          "max_weeks_ahead": 4
+        },
+        "tickets_won": 3,
+        "ticket_price": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000005
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 2
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 2.5
+            }
+          }
+        },
+        "prizes": [
+          {
+            "matches": [
+              6
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": "Jackpot"
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "value": "Jackpot"
+                },
+                "USD": {
+                  "code": "USD",
+                  "value": "Jackpot"
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              5
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.5
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 1000000
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 1000000
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              4
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 1750
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 1750
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              3
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 140
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 40
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              2
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": "Free ticket"
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "value": "Free ticket"
+                },
+                "USD": {
+                  "code": "USD",
+                  "value": "Free ticket"
+                }
+              }
+            }
+          }
+        ],
+        "jackpot": {
+          "crypto": {
+            "code": "BTC",
+            "value": 620
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 80000000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 82000000
+            }
+          }
+        },
+        "next_draw": {
+          "ticket_sell_closes_at": 1673510400,
+          "start_at": 1673510500,
+          "end_at": 1673510700
+        }
+      },
+      {
+        "id": 2,
+        "name": "Bitcoin Hero",
+        "key": "bitcoin-hero",
+        "color": "yellow",
+        "sets": [
+          {
+            "n": 6,
+            "N": 49
+          }
+        ],
+        "advanced_ticket_purchase": {
+          "days": [
+            {
+              "day": 1,
+              "time_delta_midnight_utc": 72000
+            },
+            {
+              "day": 3,
+              "time_delta_midnight_utc": 72000
+            }
+          ],
+          "max_weeks_ahead": 2
+        },
+        "tickets_won": 0,
+        "ticket_price": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.00003
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 2
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 2.5
+            }
+          }
+        },
+        "prizes": [
+          {
+            "matches": [
+              6
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": "Jackpot"
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "value": "Jackpot"
+                },
+                "USD": {
+                  "code": "USD",
+                  "value": "Jackpot"
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              5
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 1000000
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 1000000
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              4
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 1750
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 1750
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              3
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 140
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 40
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              2
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": "Free ticket"
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "value": "Free ticket"
+                },
+                "USD": {
+                  "code": "USD",
+                  "value": "Free ticket"
+                }
+              }
+            }
+          }
+        ],
+        "jackpot": {
+          "crypto": {
+            "code": "BTC",
+            "value": 32
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 4500000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 5000000
+            }
+          }
+        },
+        "next_draw": {
+          "ticket_sell_closes_at": 1672819020,
+          "start_at": 1672819040,
+          "end_at": 1672819120
+        }
+      },
+      {
+        "id": 3,
+        "name": "Ether Lotto",
+        "key": "ether-lotto",
+        "color": "blueish",
+        "sets": [
+          {
+            "n": 6,
+            "N": 49
+          }
+        ],
+        "advanced_ticket_purchase": {
+          "days": [],
+          "max_weeks_ahead": 0
+        },
+        "tickets_won": 0,
+        "ticket_price": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000006
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 2
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 2.5
+            }
+          }
+        },
+        "prizes": [
+          {
+            "matches": [
+              6
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": "Jackpot"
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "value": "Jackpot"
+                },
+                "USD": {
+                  "code": "USD",
+                  "value": "Jackpot"
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              5
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 1000000
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 1000000
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              4
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 1750
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 1750
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              3
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 140
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 40
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              2
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": "Free ticket"
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "value": "Free ticket"
+                },
+                "USD": {
+                  "code": "USD",
+                  "value": "Free ticket"
+                }
+              }
+            }
+          }
+        ],
+        "jackpot": {
+          "crypto": {
+            "code": "BTC",
+            "value": 56
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 11000000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 12000000
+            }
+          }
+        },
+        "next_draw": {
+          "ticket_sell_closes_at": 1670961000,
+          "start_at": 1670961600,
+          "end_at": 1670961700
+        }
+      },
+      {
+        "id": 4,
+        "name": "Mega Ball",
+        "key": "mega-ball",
+        "color": "red",
+        "sets": [
+          {
+            "n": 6,
+            "N": 49
+          }
+        ],
+        "advanced_ticket_purchase": {
+          "days": [
+            {
+              "day": 1,
+              "time_delta_midnight_utc": 72000
+            },
+            {
+              "day": 3,
+              "time_delta_midnight_utc": 72000
+            },
+            {
+              "day": 4,
+              "time_delta_midnight_utc": 72000
+            },
+            {
+              "day": 5,
+              "time_delta_midnight_utc": 72000
+            }
+          ],
+          "max_weeks_ahead": 4
+        },
+        "tickets_won": 0,
+        "ticket_price": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.00006
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 2
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 2.5
+            }
+          }
+        },
+        "prizes": [
+          {
+            "matches": [
+              6
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": "Jackpot"
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "value": "Jackpot"
+                },
+                "USD": {
+                  "code": "USD",
+                  "value": "Jackpot"
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              5
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 1000000
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 1000000
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              4
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 1750
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 1750
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              3
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 140
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 40
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              2
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": "Free ticket"
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "value": "Free ticket"
+                },
+                "USD": {
+                  "code": "USD",
+                  "value": "Free ticket"
+                }
+              }
+            }
+          }
+        ],
+        "jackpot": {
+          "crypto": {
+            "code": "BTC",
+            "value": 101
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 26500000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 30000000
+            }
+          }
+        },
+        "next_draw": {
+          "ticket_sell_closes_at": 1668455400,
+          "start_at": 1668456000,
+          "end_at": 1668456600
+        }
+      },
+      {
+        "id": 5,
+        "name": "Super Ball",
+        "key": "super-ball",
+        "color": "yellow-dark",
+        "sets": [
+          {
+            "n": 6,
+            "N": 49
+          }
+        ],
+        "advanced_ticket_purchase": {
+          "days": [
+            {
+              "day": 1,
+              "time_delta_midnight_utc": 72000
+            },
+            {
+              "day": 3,
+              "time_delta_midnight_utc": 72000
+            },
+            {
+              "day": 4,
+              "time_delta_midnight_utc": 72000
+            },
+            {
+              "day": 5,
+              "time_delta_midnight_utc": 72000
+            }
+          ],
+          "max_weeks_ahead": 4
+        },
+        "tickets_won": 0,
+        "ticket_price": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000007
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 2
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 2.5
+            }
+          }
+        },
+        "prizes": [
+          {
+            "matches": [
+              6
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": "Jackpot"
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "value": "Jackpot"
+                },
+                "USD": {
+                  "code": "USD",
+                  "value": "Jackpot"
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              5
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 1000000
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 1000000
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              4
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 1750
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 1750
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              3
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 140
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 40
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              2
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": "Free ticket"
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "value": "Free ticket"
+                },
+                "USD": {
+                  "code": "USD",
+                  "value": "Free ticket"
+                }
+              }
+            }
+          }
+        ],
+        "jackpot": {
+          "crypto": {
+            "code": "BTC",
+            "value": 58
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "value": 26500000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 30000000
+            }
+          }
+        },
+        "next_draw": {
+          "ticket_sell_closes_at": 1668455400,
+          "start_at": 1668456000,
+          "end_at": 1668456600
+        }
+      },
+      {
+        "id": 6,
+        "name": "Treasure",
+        "key": "treasure",
+        "color": "purple",
+        "sets": [
+          {
+            "n": 6,
+            "N": 49
+          }
+        ],
+        "advanced_ticket_purchase": {
+          "days": [
+            {
+              "day": 1,
+              "time_delta_midnight_utc": 72000
+            }
+          ],
+          "max_weeks_ahead": 4
+        },
+        "tickets_won": 0,
+        "ticket_price": {
+          "crypto": {
+            "code": "BTC",
+            "value": 8e-7
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 2
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 2.5
+            }
+          }
+        },
+        "prizes": [
+          {
+            "matches": [
+              6
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": "Jackpot"
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "value": "Jackpot"
+                },
+                "USD": {
+                  "code": "USD",
+                  "value": "Jackpot"
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              5
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 1000000
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 1000000
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              4
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 1750
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 1750
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              3
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": 0.04
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 140
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 40
+                }
+              }
+            }
+          },
+          {
+            "matches": [
+              2
+            ],
+            "prize": {
+              "crypto": {
+                "code": "BTC",
+                "value": "Free ticket"
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "value": "Free ticket"
+                },
+                "USD": {
+                  "code": "USD",
+                  "value": "Free ticket"
+                }
+              }
+            }
+          }
+        ],
+        "jackpot": {
+          "crypto": {
+            "code": "BTC",
+            "value": 700
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 26500000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 30000000
+            }
+          }
+        },
+        "next_draw": {
+          "ticket_sell_closes_at": 1668455400,
+          "start_at": 1668456000,
+          "end_at": 1668456600
+        }
+      }
+    ],
+    "saved-numbers": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "last-played-numbers": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "wins": [
+      {
+        "id": 1,
+        "play_id": 2,
+        "play_page": 1,
+        "date": "Sat 21 May, 2022",
+        "ticket": [
+          45,
+          23,
+          4,
+          56,
+          2,
+          10
+        ],
+        "amount_won": {
+          "crypto": {
+            "code": "BTC",
+            "value": 618
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 11500000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 13000000
+            }
+          }
+        },
+        "win_type": "JACKPOT",
+        "is_win": true,
+        "is_claimed": false
+      },
+      {
+        "id": 2,
+        "play_id": 3,
+        "play_page": 1,
+        "date": "Wed 18 May, 2022",
+        "ticket": [
+          2,
+          5,
+          21,
+          23,
+          7,
+          9
+        ],
+        "amount_won": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.00065
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 15
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 17
+            }
+          }
+        },
+        "win_type": "PRIZE",
+        "is_win": true,
+        "is_claimed": true
+      },
+      {
+        "id": 3,
+        "play_id": 7,
+        "play_page": 2,
+        "date": "Mon 26 Jun, 2021",
+        "ticket": [
+          2,
+          5,
+          21,
+          23,
+          7,
+          9
+        ],
+        "amount_won": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.00165
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 200
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 220
+            }
+          }
+        },
+        "win_type": "PRIZE",
+        "is_win": true,
+        "is_claimed": false
+      },
+      {
+        "id": 4,
+        "play_id": 11,
+        "play_page": 3,
+        "date": "Fri 26 Feb, 2020",
+        "tickets": [
+          2,
+          5,
+          21,
+          23,
+          7,
+          9
+        ],
+        "amount_won": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.0005
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 5
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 6
+            }
+          }
+        },
+        "win_type": "PRIZE",
+        "is_win": true,
+        "is_claimed": true
+      }
+    ],
+    "plays-page-1": {
+      "page": 1,
+      "total_pages": 3,
+      "results": [
+        {
+          "id": 1,
+          "date": "Mon 23 May, 2022",
+          "draw": {},
+          "tickets": [
+            [
+              16,
+              20,
+              24,
+              35,
+              43,
+              58
+            ],
+            [
+              16,
+              20,
+              24,
+              35,
+              43,
+              58
+            ]
+          ],
+          "amount_won": false,
+          "win_type": "",
+          "is_win": false,
+          "is_open": false
+        },
+        {
+          "id": 2,
+          "date": "Sat 21 May, 2022",
+          "draw": {
+            "id": 13,
+            "number": 23,
+            "month_and_year": "May, 2022",
+            "datetime": "Sat 21 May, 2022",
+            "jackpot": {
+              "crypto": {
+                "code": "BTC",
+                "value": 618
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 11500000
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 12000000
+                }
+              }
+            },
+            "donation": {
+              "crypto": {
+                "code": "BTC",
+                "value": 50
+              },
+              "fiat": {
+                "GBP": {
+                  "code": "GBP",
+                  "symbol": "£",
+                  "position_of_symbol": "LEFT",
+                  "value": 3000000
+                },
+                "USD": {
+                  "code": "USD",
+                  "symbol": "$",
+                  "position_of_symbol": "LEFT",
+                  "value": 3200000
+                }
+              }
+            },
+            "partners": [],
+            "numbers": [
+              45,
+              23,
+              4,
+              56,
+              2,
+              10
+            ]
+          },
+          "tickets": [
+            [
+              45,
+              23,
+              4,
+              56,
+              2,
+              10
+            ],
+            [
+              15,
+              14,
+              11,
+              43,
+              70,
+              13
+            ]
+          ],
+          "amount_won": {
+            "crypto": {
+              "code": "BTC",
+              "value": 618
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 11500000
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 12000000
+              }
+            }
+          },
+          "win_type": "JACKPOT",
+          "is_win": true,
+          "is_claimed": false,
+          "is_open": false
+        },
+        {
+          "id": 3,
+          "date": "Wed 18 May, 2022",
+          "draw": {
+            "id": 12,
+            "number": 22,
+            "month_and_year": "May, 2022",
+            "datetime": "Wed 18 May, 2022",
+            "jackpot": false,
+            "donation": false,
+            "partners": [],
+            "numbers": [
+              2,
+              5,
+              21,
+              23,
+              7,
+              9
+            ]
+          },
+          "tickets": [
+            [
+              45,
+              23,
+              4,
+              56,
+              2,
+              10
+            ],
+            [
+              15,
+              14,
+              11,
+              43,
+              70,
+              13
+            ]
+          ],
+          "amount_won": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.00065
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 15
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 17
+              }
+            }
+          },
+          "win_type": "PRIZE",
+          "is_win": true,
+          "is_claimed": true,
+          "is_open": false
+        },
+        {
+          "id": 4,
+          "date": "Mon 16 May, 2022",
+          "draw": {
+            "id": 11,
+            "number": 21,
+            "month_and_year": "May, 2022",
+            "datetime": "Mon 16 May, 2022",
+            "jackpot": false,
+            "donation": false,
+            "partners": [],
+            "numbers": [
+              54,
+              3,
+              14,
+              10,
+              9,
+              36
+            ]
+          },
+          "tickets": [
+            [
+              45,
+              23,
+              4,
+              56,
+              2,
+              13
+            ],
+            [
+              2,
+              5,
+              21,
+              23,
+              7,
+              13
+            ]
+          ],
+          "amount_won": false,
+          "win_type": "",
+          "is_win": false,
+          "is_open": false
+        }
+      ]
+    },
+    "plays-page-2": {
+      "page": 2,
+      "total_pages": 3,
+      "results": [
+        {
+          "id": 5,
+          "date": "Fri 30 Jun, 2021",
+          "draw": {
+            "id": 10,
+            "number": 20,
+            "month_and_year": "Jun, 2021",
+            "datetime": "Fri 30 Jun, 2021",
+            "jackpot": false,
+            "donation": false,
+            "partners": [],
+            "numbers": [
+              54,
+              3,
+              14,
+              10,
+              9,
+              36
+            ]
+          },
+          "tickets": [
+            [
+              45,
+              23,
+              4,
+              56,
+              2,
+              13
+            ],
+            [
+              2,
+              5,
+              21,
+              23,
+              7,
+              13
+            ]
+          ],
+          "amount_won": false,
+          "win_type": "",
+          "is_win": false,
+          "is_open": false
+        },
+        {
+          "id": 6,
+          "date": "Wed 28 Jun, 2021",
+          "draw": {
+            "id": 9,
+            "number": 19,
+            "month_and_year": "Jun, 2021",
+            "datetime": "Wed 28 Jun, 2021",
+            "jackpot": false,
+            "donation": false,
+            "partners": [],
+            "numbers": [
+              54,
+              3,
+              14,
+              10,
+              9,
+              36
+            ]
+          },
+          "tickets": [
+            [
+              45,
+              23,
+              4,
+              56,
+              2,
+              13
+            ],
+            [
+              2,
+              5,
+              21,
+              23,
+              7,
+              13
+            ]
+          ],
+          "amount_won": false,
+          "win_type": "",
+          "is_win": false,
+          "is_open": false
+        },
+        {
+          "id": 7,
+          "date": "Mon 26 Jun, 2021",
+          "draw": {
+            "id": 8,
+            "number": 18,
+            "month_and_year": "Jun, 2021",
+            "datetime": "Mon 26 Jun, 2021",
+            "jackpot": false,
+            "donation": false,
+            "partners": [],
+            "numbers": [
+              45,
+              20,
+              40,
+              56,
+              22,
+              15
+            ]
+          },
+          "tickets": [
+            [
+              45,
+              23,
+              4,
+              56,
+              2,
+              13
+            ],
+            [
+              2,
+              5,
+              21,
+              23,
+              7,
+              13
+            ]
+          ],
+          "amount_won": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.00165
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 200
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 215
+              }
+            }
+          },
+          "win_type": "PRIZE",
+          "is_win": true,
+          "is_claimed": false,
+          "is_open": false
+        },
+        {
+          "id": 8,
+          "date": "Fri 23 Jun, 2021",
+          "draw": {
+            "id": 7,
+            "number": 17,
+            "month_and_year": "Jun, 2021",
+            "datetime": "Fri 23 Jun, 2021",
+            "jackpot": false,
+            "donation": false,
+            "partners": [],
+            "numbers": [
+              54,
+              3,
+              14,
+              10,
+              9,
+              36
+            ]
+          },
+          "tickets": [
+            [
+              45,
+              23,
+              4,
+              56,
+              2,
+              13
+            ],
+            [
+              2,
+              5,
+              21,
+              23,
+              7,
+              13
+            ]
+          ],
+          "amount_won": false,
+          "win_type": "",
+          "is_win": false,
+          "is_open": false
+        }
+      ]
+    },
+    "plays-page-3": {
+      "page": 3,
+      "total_pages": 3,
+      "results": [
+        {
+          "id": 9,
+          "date": "Wed 3 Mar, 2020",
+          "draw": {
+            "id": 6,
+            "number": 16,
+            "month_and_year": "Mar, 2020",
+            "datetime": "Wed 3 Mar, 2020",
+            "jackpot": false,
+            "donation": false,
+            "partners": [],
+            "numbers": [
+              45,
+              23,
+              4,
+              56,
+              2,
+              10
+            ]
+          },
+          "tickets": [
+            [
+              16,
+              20,
+              24,
+              35,
+              43,
+              58
+            ]
+          ],
+          "amount_won": false,
+          "win_type": "",
+          "is_win": false,
+          "is_open": false
+        },
+        {
+          "id": 10,
+          "date": "Mon 1 Mar, 2020",
+          "draw": {
+            "id": 5,
+            "number": 15,
+            "month_and_year": "Mar, 2020",
+            "datetime": "Mon 1 Mar, 2020",
+            "jackpot": false,
+            "donation": false,
+            "partners": [],
+            "numbers": [
+              45,
+              23,
+              4,
+              56,
+              2,
+              10
+            ]
+          },
+          "tickets": [
+            [
+              16,
+              20,
+              24,
+              35,
+              43,
+              58
+            ]
+          ],
+          "amount_won": false,
+          "win_type": "",
+          "is_win": false,
+          "is_open": false
+        },
+        {
+          "id": 11,
+          "date": "Fri 26 Feb, 2020",
+          "draw": {
+            "id": 4,
+            "number": 14,
+            "month_and_year": "Feb, 2020",
+            "datetime": "Fri 26 Feb, 2020",
+            "jackpot": false,
+            "donation": false,
+            "partners": [],
+            "numbers": [
+              2,
+              5,
+              21,
+              23,
+              7,
+              9
+            ]
+          },
+          "tickets": [
+            [
+              45,
+              23,
+              4,
+              56,
+              2,
+              10
+            ]
+          ],
+          "amount_won": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.00005
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 5
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 7
+              }
+            }
+          },
+          "win_type": "PRIZE",
+          "is_win": true,
+          "is_claimed": true,
+          "is_open": false
+        },
+        {
+          "id": 12,
+          "date": "Wed 24 Feb, 2020",
+          "draw": {
+            "id": 3,
+            "number": 13,
+            "month_and_year": "Feb, 2020",
+            "datetime": "Wed 24 Feb, 2020",
+            "jackpot": false,
+            "donation": false,
+            "partners": [],
+            "numbers": [
+              54,
+              3,
+              14,
+              10,
+              9,
+              36
+            ]
+          },
+          "tickets": [
+            [
+              16,
+              20,
+              24,
+              35,
+              43,
+              58
+            ]
+          ],
+          "amount_won": false,
+          "win_type": "",
+          "is_win": false,
+          "is_open": false
+        }
+      ]
+    },
+    "plays-page-not-existing": {
+      "page": 4,
+      "total_pages": 3,
+      "results": []
+    },
+    "draws": [
+      {
+        "id": 1,
+        "number": 12,
+        "month_and_year": "May, 2022",
+        "datetime": "Sat 21 May, 2022",
+        "jackpot": {
+          "crypto": {
+            "code": "BTC",
+            "value": 600
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 7902000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 8500000
+            }
+          }
+        },
+        "donation": {
+          "crypto": {
+            "code": "BTC",
+            "value": 200
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 1000000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 1100000
+            }
+          }
+        },
+        "partners": [
+          {
+            "name": "Partner 1",
+            "url": "#"
+          },
+          {
+            "name": "Partner 2",
+            "url": "#"
+          }
+        ],
+        "numbers": [
+          11,
+          23,
+          4,
+          56,
+          2,
+          10
+        ]
+      },
+      {
+        "id": 2,
+        "number": 11,
+        "month_and_year": "May, 2022",
+        "datetime": "Wed 18 May, 2022",
+        "jackpot": {
+          "crypto": {
+            "code": "BTC",
+            "value": 500
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 5342200
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 6200000
+            }
+          }
+        },
+        "donation": {
+          "crypto": {
+            "code": "BTC",
+            "value": 40
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 800000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 950000
+            }
+          }
+        },
+        "partners": [
+          {
+            "name": "Partner 1",
+            "url": "#"
+          },
+          {
+            "name": "Partner 2",
+            "url": "#"
+          },
+          {
+            "name": "Partner 3",
+            "url": "#"
+          }
+        ],
+        "numbers": [
+          7,
+          10,
+          13,
+          20,
+          45,
+          34
+        ]
+      },
+      {
+        "id": 3,
+        "number": 10,
+        "month_and_year": "Jan, 2021",
+        "datetime": "Wed 04 Jan, 2021",
+        "jackpot": {
+          "crypto": {
+            "code": "BTC",
+            "value": 620
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 10982098
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 12000098
+            }
+          }
+        },
+        "donation": {
+          "crypto": {
+            "code": "BTC",
+            "value": 40
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 1200000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 1350000
+            }
+          }
+        },
+        "partners": [
+          {
+            "name": "Partner 1",
+            "url": "#"
+          },
+          {
+            "name": "Partner 2",
+            "url": "#"
+          }
+        ],
+        "numbers": [
+          21,
+          2,
+          50,
+          21,
+          30,
+          4
+        ]
+      },
+      {
+        "id": 4,
+        "number": 9,
+        "month_and_year": "Jan, 2021",
+        "datetime": "Wed 23 Dec, 2020",
+        "jackpot": false,
+        "donation": false,
+        "partners": [],
+        "numbers": [
+          21,
+          2,
+          50,
+          21,
+          30,
+          4
+        ]
+      },
+      {
+        "id": 5,
+        "number": 8,
+        "month_and_year": "Dec, 2021",
+        "datetime": "Mon 08 Dec, 2021",
+        "jackpot": false,
+        "donation": false,
+        "partners": [],
+        "numbers": [
+          2,
+          23,
+          4,
+          56,
+          2,
+          10
+        ]
+      },
+      {
+        "id": 6,
+        "number": 7,
+        "month_and_year": "Dec, 2021",
+        "datetime": "Fri 05 Dec, 2021",
+        "jackpot": false,
+        "donation": false,
+        "partners": [],
+        "numbers": [
+          9,
+          10,
+          13,
+          20,
+          45,
+          34
+        ]
+      },
+      {
+        "id": 7,
+        "number": 6,
+        "month_and_year": "Dec, 2021",
+        "datetime": "Wed 03 Dec, 2021",
+        "jackpot": false,
+        "donation": false,
+        "partners": [],
+        "numbers": [
+          23,
+          2,
+          50,
+          21,
+          30,
+          4
+        ]
+      },
+      {
+        "id": 8,
+        "number": 5,
+        "month_and_year": "Dec, 2021",
+        "datetime": "Mon 01 Dec, 2020",
+        "jackpot": false,
+        "donation": false,
+        "partners": [],
+        "numbers": [
+          45,
+          2,
+          50,
+          21,
+          30,
+          4
+        ]
+      },
+      {
+        "id": 9,
+        "number": 4,
+        "month_and_year": "Nov, 2021",
+        "datetime": "Fri 30 Nov, 2021",
+        "jackpot": false,
+        "donation": false,
+        "partners": [],
+        "numbers": [
+          45,
+          23,
+          4,
+          56,
+          2,
+          10
+        ]
+      },
+      {
+        "id": 10,
+        "number": 3,
+        "month_and_year": "Nov, 2021",
+        "datetime": "Wed 28 Nov, 2021",
+        "jackpot": false,
+        "donation": false,
+        "partners": [],
+        "numbers": [
+          19,
+          10,
+          13,
+          20,
+          45,
+          34
+        ]
+      },
+      {
+        "id": 11,
+        "number": 2,
+        "month_and_year": "Nov, 2021",
+        "datetime": "Mon 26 Nov, 2021",
+        "jackpot": false,
+        "donation": false,
+        "partners": [],
+        "numbers": [
+          3,
+          2,
+          50,
+          21,
+          30,
+          4
+        ]
+      },
+      {
+        "id": 12,
+        "number": 1,
+        "month_and_year": "Nov, 2021",
+        "datetime": "Fri 23 Nov, 2020",
+        "jackpot": false,
+        "donation": false,
+        "partners": [],
+        "numbers": [
+          5,
+          2,
+          50,
+          21,
+          30,
+          4
+        ]
+      }
+    ],
+    "draws-page-1": {
+      "page": 1,
+      "total_pages": 3,
+      "results": [
+        {
+          "id": 1,
+          "number": 12,
+          "month_and_year": "May, 2022",
+          "datetime": "Sat 21 May, 2022",
+          "jackpot": {
+            "crypto": {
+              "code": "BTC",
+              "value": 600
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 7902000
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 8000000
+              }
+            }
+          },
+          "donation": {
+            "crypto": {
+              "code": "BTC",
+              "value": 200
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 1000000
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 1100000
+              }
+            }
+          },
+          "partners": [
+            {
+              "name": "Partner 1",
+              "url": "#"
+            },
+            {
+              "name": "Partner 2",
+              "url": "#"
+            }
+          ],
+          "numbers": [
+            11,
+            23,
+            4,
+            56,
+            2,
+            10
+          ]
+        },
+        {
+          "id": 2,
+          "number": 11,
+          "month_and_year": "May, 2022",
+          "datetime": "Wed 18 May, 2022",
+          "jackpot": {
+            "crypto": {
+              "code": "BTC",
+              "value": 500
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 5342020
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 6000000
+              }
+            }
+          },
+          "donation": {
+            "crypto": {
+              "code": "BTC",
+              "value": 40
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 800000
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 900000
+              }
+            }
+          },
+          "partners": [
+            {
+              "name": "Partner 1",
+              "url": "#"
+            },
+            {
+              "name": "Partner 2",
+              "url": "#"
+            },
+            {
+              "name": "Partner 3",
+              "url": "#"
+            }
+          ],
+          "numbers": [
+            7,
+            10,
+            13,
+            20,
+            45,
+            34
+          ]
+        },
+        {
+          "id": 3,
+          "number": 10,
+          "month_and_year": "Jan, 2021",
+          "datetime": "Wed 04 Jan, 2021",
+          "jackpot": {
+            "crypto": {
+              "code": "BTC",
+              "value": 620
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 10982982
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 11000000
+              }
+            }
+          },
+          "donation": {
+            "crypto": {
+              "code": "BTC",
+              "value": 40
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 1200000
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 1400000
+              }
+            }
+          },
+          "partners": [
+            {
+              "name": "Partner 1",
+              "url": "#"
+            },
+            {
+              "name": "Partner 2",
+              "url": "#"
+            }
+          ],
+          "numbers": [
+            21,
+            2,
+            50,
+            21,
+            30,
+            4
+          ]
+        },
+        {
+          "id": 4,
+          "number": 9,
+          "month_and_year": "Jan, 2021",
+          "datetime": "Wed 23 Dec, 2020",
+          "jackpot": false,
+          "donation": false,
+          "partners": [],
+          "numbers": [
+            21,
+            2,
+            50,
+            21,
+            30,
+            4
+          ]
+        }
+      ]
+    },
+    "draws-page-2": {
+      "page": 2,
+      "total_pages": 3,
+      "results": [
+        {
+          "id": 5,
+          "number": 8,
+          "month_and_year": "Dec, 2021",
+          "datetime": "Mon 08 Dec, 2021",
+          "jackpot": false,
+          "donation": false,
+          "partners": [],
+          "numbers": [
+            2,
+            23,
+            4,
+            56,
+            2,
+            10
+          ]
+        },
+        {
+          "id": 6,
+          "number": 7,
+          "month_and_year": "Dec, 2021",
+          "datetime": "Fri 05 Dec, 2021",
+          "jackpot": false,
+          "donation": false,
+          "partners": [],
+          "numbers": [
+            9,
+            10,
+            13,
+            20,
+            45,
+            34
+          ]
+        },
+        {
+          "id": 7,
+          "number": 6,
+          "month_and_year": "Dec, 2021",
+          "datetime": "Wed 03 Dec, 2021",
+          "jackpot": false,
+          "donation": false,
+          "partners": [],
+          "numbers": [
+            23,
+            2,
+            50,
+            21,
+            30,
+            4
+          ]
+        },
+        {
+          "id": 8,
+          "number": 5,
+          "month_and_year": "Dec, 2021",
+          "datetime": "Mon 01 Dec, 2020",
+          "jackpot": false,
+          "donation": false,
+          "partners": [],
+          "numbers": [
+            45,
+            2,
+            50,
+            21,
+            30,
+            4
+          ]
+        }
+      ]
+    },
+    "draws-page-3": {
+      "page": 3,
+      "total_pages": 3,
+      "results": [
+        {
+          "id": 9,
+          "number": 4,
+          "month_and_year": "Nov, 2021",
+          "datetime": "Fri 30 Nov, 2021",
+          "jackpot": false,
+          "donation": false,
+          "partners": [],
+          "numbers": [
+            45,
+            23,
+            4,
+            56,
+            2,
+            10
+          ]
+        },
+        {
+          "id": 10,
+          "number": 3,
+          "month_and_year": "Nov, 2021",
+          "datetime": "Wed 28 Nov, 2021",
+          "jackpot": false,
+          "donation": false,
+          "partners": [],
+          "numbers": [
+            19,
+            10,
+            13,
+            20,
+            45,
+            34
+          ]
+        },
+        {
+          "id": 11,
+          "number": 2,
+          "month_and_year": "Nov, 2021",
+          "datetime": "Mon 26 Nov, 2021",
+          "jackpot": false,
+          "donation": false,
+          "partners": [],
+          "numbers": [
+            3,
+            2,
+            50,
+            21,
+            30,
+            4
+          ]
+        },
+        {
+          "id": 12,
+          "number": 1,
+          "month_and_year": "Nov, 2021",
+          "datetime": "Fri 23 Nov, 2020",
+          "jackpot": false,
+          "donation": false,
+          "partners": [],
+          "numbers": [
+            5,
+            2,
+            50,
+            21,
+            30,
+            4
+          ]
+        }
+      ]
+    },
+    "draws-page-not-existing": {
+      "page": 4,
+      "total_pages": 3,
+      "results": []
+    },
+    "watch": {
+      "draw": [
+        16,
+        20,
+        1,
+        2,
+        3,
+        true
+      ],
+      "prizes": [
+        {
+          "type": "jackpot",
+          "matches": [
+            6
+          ],
+          "prize": {
+            "crypto": {
+              "code": "BTC",
+              "value": 620
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 80000000
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 82000000
+              }
+            }
+          },
+          "wins": 2,
+          "youWin": true,
+          "partners": [
+            {
+              "name": "Partner 1",
+              "url": "#"
+            },
+            {
+              "name": "Partner 2",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "type": "prize",
+          "matches": [
+            5
+          ],
+          "prize": {
+            "crypto": {
+              "code": "BTC",
+              "value": 5
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 100000
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 100000
+              }
+            }
+          },
+          "wins": 4,
+          "youWin": false
+        },
+        {
+          "type": "prize",
+          "matches": [
+            4
+          ],
+          "prize": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.5
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 10000
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 10000
+              }
+            }
+          },
+          "wins": 23,
+          "youWin": false
+        },
+        {
+          "type": "prize",
+          "matches": [
+            3
+          ],
+          "prize": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.02
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 1000
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 1000
+              }
+            }
+          },
+          "wins": 237,
+          "youWin": false
+        },
+        {
+          "type": "prize",
+          "matches": [
+            2
+          ],
+          "prize": {
+            "crypto": {
+              "code": "BTC",
+              "value": "Free ticket"
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "value": "Free ticket"
+              },
+              "USD": {
+                "code": "USD",
+                "value": "Free ticket"
+              }
+            }
+          },
+          "wins": 4718,
+          "youWin": false
+        }
+      ]
+    },
+    "settings-games": [
+      {
+        "id": 1,
+        "name": "Bitcoin Lotto",
+        "key": "bitcoin-lotto",
+        "jackpot": {
+          "crypto": {
+            "code": "BTC",
+            "value": 700
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 80000000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 82000000
+            }
+          }
+        },
+        "next_draw": {
+          "start_at": 1668456000
+        },
+        "color": "redish"
+      },
+      {
+        "id": 2,
+        "name": "Bitcoin Lotto",
+        "key": "bitcoin-lotto",
+        "jackpot": {
+          "crypto": {
+            "code": "BTC",
+            "value": 23
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 4500000
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 5000000
+            }
+          }
+        },
+        "next_draw": {
+          "start_at": 1668456000
+        },
+        "color": "yellow"
+      }
+    ],
+    "settings-messages": [
+      {
+        "is_read": true,
+        "id": 1
+      },
+      {
+        "is_read": true,
+        "id": 2
+      },
+      {
+        "is_read": false,
+        "id": 3
+      },
+      {
+        "is_read": false,
+        "id": 4
+      },
+      {
+        "is_read": true,
+        "id": 5
+      },
+      {
+        "is_read": true,
+        "id": 6
+      },
+      {
+        "id": 7,
+        "is_read": true
+      },
+      {
+        "id": 8,
+        "is_read": true
+      },
+      {
+        "is_read": true,
+        "id": 9
+      },
+      {
+        "is_read": true,
+        "id": 10
+      },
+      {
+        "is_read": true,
+        "id": 11
+      },
+      {
+        "is_read": false,
+        "id": 12
+      },
+      {
+        "is_read": false,
+        "id": 13
+      },
+      {
+        "is_read": true,
+        "id": 14
+      },
+      {
+        "is_read": true,
+        "id": 15
+      },
+      {
+        "is_read": true,
+        "id": 16
+      },
+      {
+        "is_read": false,
+        "id": 17
+      },
+      {
+        "is_read": false,
+        "id": 18
+      },
+      {
+        "is_read": true,
+        "id": 19
+      },
+      {
+        "is_read": true,
+        "id": 20
+      },
+      {
+        "is_read": true,
+        "id": 21
+      },
+      {
+        "is_read": false,
+        "id": 22
+      },
+      {
+        "is_read": false,
+        "id": 23
+      },
+      {
+        "is_read": true,
+        "id": 24
+      },
+      {
+        "is_read": false,
+        "id": 25
+      },
+      {
+        "is_read": true,
+        "id": 26
+      },
+      {
+        "is_read": false,
+        "id": 27
+      },
+      {
+        "is_read": false,
+        "id": 28
+      },
+      {
+        "is_read": true,
+        "id": 29
+      },
+      {
+        "is_read": true,
+        "id": 30
+      },
+      {
+        "is_read": true,
+        "id": 31
+      },
+      {
+        "is_read": false,
+        "id": 32
+      },
+      {
+        "is_read": false,
+        "id": 33
+      },
+      {
+        "is_read": true,
+        "id": 34
+      },
+      {
+        "is_read": true,
+        "id": 35
+      },
+      {
+        "is_read": true,
+        "id": 36
+      },
+      {
+        "is_read": false,
+        "id": 37
+      },
+      {
+        "is_read": false,
+        "id": 38
+      },
+      {
+        "is_read": true,
+        "id": 39
+      },
+      {
+        "is_read": true,
+        "id": 40
+      },
+      {
+        "is_read": true,
+        "id": 41
+      },
+      {
+        "is_read": false,
+        "id": 42
+      },
+      {
+        "is_read": true,
+        "id": 43
+      }
+    ],
+    "settings-messages-page-1": {
+      "page": 1,
+      "total_pages": 9,
+      "results": [
+        {
+          "id": 1,
+          "title": "Lorem ipsum dolor sit amet consectetur 1...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 2,
+          "title": "Lorem ipsum dolor sit amet consectetur 2...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 3,
+          "title": "Lorem ipsum dolor sit amet consectetur 3...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 4,
+          "title": "Lorem ipsum dolor sit amet consectetur 4...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 5,
+          "title": "Lorem ipsum dolor sit amet consectetur 5...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        }
+      ]
+    },
+    "settings-messages-page-2": {
+      "page": 2,
+      "total_pages": 9,
+      "results": [
+        {
+          "id": 6,
+          "title": "Lorem ipsum dolor sit amet consectetur 6...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 7,
+          "title": "Lorem ipsum dolor sit amet consectetur 7...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 8,
+          "title": "Lorem ipsum dolor sit amet consectetur 8...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 9,
+          "title": "Lorem ipsum dolor sit amet consectetur 9...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 10,
+          "title": "Lorem ipsum dolor sit amet consectetur 10...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        }
+      ]
+    },
+    "settings-messages-page-3": {
+      "page": 3,
+      "total_pages": 9,
+      "results": [
+        {
+          "id": 11,
+          "title": "Lorem ipsum dolor sit amet consectetur 11...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 12,
+          "title": "Lorem ipsum dolor sit amet consectetur 12...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 13,
+          "title": "Lorem ipsum dolor sit amet consectetur 13...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 14,
+          "title": "Lorem ipsum dolor sit amet consectetur 14...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 15,
+          "title": "Lorem ipsum dolor sit amet consectetur 15...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        }
+      ]
+    },
+    "settings-messages-page-4": {
+      "page": 4,
+      "total_pages": 9,
+      "results": [
+        {
+          "id": 16,
+          "title": "Lorem ipsum dolor sit amet consectetur 16...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 17,
+          "title": "Lorem ipsum dolor sit amet consectetur 17...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 18,
+          "title": "Lorem ipsum dolor sit amet consectetur 18...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 19,
+          "title": "Lorem ipsum dolor sit amet consectetur 19...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 20,
+          "title": "Lorem ipsum dolor sit amet consectetur 20...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        }
+      ]
+    },
+    "settings-messages-page-5": {
+      "page": 5,
+      "total_pages": 9,
+      "results": [
+        {
+          "id": 21,
+          "title": "Lorem ipsum dolor sit amet consectetur 21...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 22,
+          "title": "Lorem ipsum dolor sit amet consectetur 22...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 23,
+          "title": "Lorem ipsum dolor sit amet consectetur 23...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 24,
+          "title": "Lorem ipsum dolor sit amet consectetur 24...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 25,
+          "title": "Lorem ipsum dolor sit amet consectetur 25...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        }
+      ]
+    },
+    "settings-messages-page-6": {
+      "page": 6,
+      "total_pages": 9,
+      "results": [
+        {
+          "id": 26,
+          "title": "Lorem ipsum dolor sit amet consectetur 26...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 27,
+          "title": "Lorem ipsum dolor sit amet consectetur 27...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 28,
+          "title": "Lorem ipsum dolor sit amet consectetur 28...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 29,
+          "title": "Lorem ipsum dolor sit amet consectetur 29...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 30,
+          "title": "Lorem ipsum dolor sit amet consectetur 30...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        }
+      ]
+    },
+    "settings-messages-page-7": {
+      "page": 7,
+      "total_pages": 9,
+      "results": [
+        {
+          "id": 31,
+          "title": "Lorem ipsum dolor sit amet consectetur 31...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 32,
+          "title": "Lorem ipsum dolor sit amet consectetur 32...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 33,
+          "title": "Lorem ipsum dolor sit amet consectetur 33...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 34,
+          "title": "Lorem ipsum dolor sit amet consectetur 34...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 35,
+          "title": "Lorem ipsum dolor sit amet consectetur 35...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        }
+      ]
+    },
+    "settings-messages-page-8": {
+      "page": 8,
+      "total_pages": 9,
+      "results": [
+        {
+          "id": 36,
+          "title": "Lorem ipsum dolor sit amet consectetur 36...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 37,
+          "title": "Lorem ipsum dolor sit amet consectetur 37...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 38,
+          "title": "Lorem ipsum dolor sit amet consectetur 38...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 39,
+          "title": "Lorem ipsum dolor sit amet consectetur 39...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 40,
+          "title": "Lorem ipsum dolor sit amet consectetur 40...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        }
+      ]
+    },
+    "settings-messages-page-9": {
+      "page": 9,
+      "total_pages": 9,
+      "results": [
+        {
+          "id": 41,
+          "title": "Lorem ipsum dolor sit amet consectetur 41...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": false,
+          "is_open": false
+        },
+        {
+          "id": 42,
+          "title": "Lorem ipsum dolor sit amet consectetur 42...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        },
+        {
+          "id": 43,
+          "title": "Lorem ipsum dolor sit amet consectetur 43...",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quae et, dolor delectus omnis possimus officiis mollitia assumenda facilis quisquam!</p><p>Maiores odit quibusdam nihil ipsa ducimus consequuntur quas tempore dolor.</p>",
+          "is_read": true,
+          "is_open": false
+        }
+      ]
+    },
+    "settings-messages-page-not-existing": {
+      "page": 10,
+      "total_pages": 9,
+      "results": []
+    },
+    "settings-personal-details": {
+      "username": "TheGreatArchitect",
+      "email": "p.d.tashev@gmail.com",
+      "timezone_id": "2",
+      "currency_code": "GBP"
+    },
+    "settings-personal-details-username-available": [
+      true
+    ],
+    "settings-personal-details-username-not-available": [
+      false
+    ],
+    "settings-personal-details-email-available": [
+      true
+    ],
+    "settings-personal-details-email-not-available": [
+      false
+    ],
+    "settings-password": {
+      "current_password": "nemoNemo1234",
+      "new_password": "nemoNemo12345",
+      "confirm_password": "nemoNemo12345"
+    },
+    "settings-security-security-questions": {
+      "is_active": true,
+      "security_question_id": "2",
+      "answer": "Mandelbrod"
+    },
+    "settings-active-sessions": [
+      {
+        "id": 1,
+        "created_at": "14 Jun 2022, 09:45PM",
+        "fingerprint": "Chrome (Mac)",
+        "is_current_session": true,
+        "access_token": "ACCESS_TOKEN_1"
+      },
+      {
+        "id": 2,
+        "created_at": "10 Nov 2021, 06:08PM",
+        "fingerprint": "Chrome (Windows)",
+        "is_current_session": false,
+        "access_token": "ACCESS_TOKEN_2"
+      },
+      {
+        "id": 3,
+        "created_at": "03 Aug 2021, 05:08PM",
+        "fingerprint": "Chrome (Windows)",
+        "is_current_session": false,
+        "access_token": "ACCESS_TOKEN_3"
+      },
+      {
+        "id": 4,
+        "created_at": "01 Mar 2021, 05:08PM",
+        "fingerprint": "Chrome (iPhone)",
+        "is_current_session": false,
+        "access_token": "ACCESS_TOKEN_4"
+      },
+      {
+        "id": 5,
+        "created_at": "05 Feb 2021, 05:08PM",
+        "fingerprint": "Chrome (iPhone)",
+        "is_current_session": false,
+        "access_token": "ACCESS_TOKEN_5"
+      }
+    ],
+    "settings-email-preferences": {
+      "is_lottery_games_active": true,
+      "is_winners_and_good_causes_active": false
+    },
+    "settings-transactions": [
+      {
+        "id": 1,
+        "datetime": "14 Mar 2022, 02:30PM",
+        "network": "Lightning Network",
+        "tnx_label": "LK2820790",
+        "tnx_link": "#",
+        "invoice_link": "#",
+        "amount": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000011
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 2
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 2.5
+            }
+          }
+        }
+      },
+      {
+        "id": 2,
+        "datetime": "04 Feb 2022, 01:21PM",
+        "network": "Lightning Network",
+        "tnx_label": "SD2823784",
+        "tnx_link": "#",
+        "invoice_link": "#",
+        "amount": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000061
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 10
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 11.5
+            }
+          }
+        }
+      },
+      {
+        "id": 3,
+        "datetime": "21 Jan 2022, 10:30AM",
+        "network": "Lightning Network",
+        "tnx_label": "ZD2820452",
+        "tnx_link": "#",
+        "invoice_link": "#",
+        "amount": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000074
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 14
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 15.5
+            }
+          }
+        }
+      },
+      {
+        "id": 4,
+        "datetime": "02 Jan 2022, 06:30PM",
+        "network": "Lightning Network",
+        "tnx_label": "QX2820783",
+        "tnx_link": "#",
+        "invoice_link": "#",
+        "amount": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000061
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 10
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 11
+            }
+          }
+        }
+      },
+      {
+        "id": 5,
+        "datetime": "10 Jun 2023, 09:30PM",
+        "network": "Lightning Network",
+        "tnx_label": "ZX2820765",
+        "tnx_link": "#",
+        "invoice_link": "#",
+        "amount": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000031
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 20
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 21
+            }
+          }
+        }
+      },
+      {
+        "id": 6,
+        "datetime": "24 Mar 2022, 02:30PM",
+        "network": "Lightning Network",
+        "tnx_label": "LK2820790",
+        "tnx_link": "#",
+        "invoice_link": "#",
+        "amount": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000011
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 2
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 2.2
+            }
+          }
+        }
+      },
+      {
+        "id": 7,
+        "datetime": "24 Feb 2022, 01:21PM",
+        "network": "Lightning Network",
+        "tnx_label": "SD2823784",
+        "tnx_link": "#",
+        "invoice_link": "#",
+        "amount": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000061
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 10
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 12.2
+            }
+          }
+        }
+      },
+      {
+        "id": 8,
+        "datetime": "21 Jan 2022, 10:30AM",
+        "network": "Lightning Network",
+        "tnx_label": "ZD2820452",
+        "tnx_link": "#",
+        "invoice_link": "#",
+        "amount": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000074
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 14
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 14.2
+            }
+          }
+        }
+      },
+      {
+        "id": 9,
+        "datetime": "22 Jan 2022, 06:30PM",
+        "network": "Lightning Network",
+        "tnx_label": "QX2820783",
+        "tnx_link": "#",
+        "invoice_link": "#",
+        "amount": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000061
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 10
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 12
+            }
+          }
+        }
+      },
+      {
+        "id": 10,
+        "datetime": "20 Jun 2023, 09:30PM",
+        "network": "Lightning Network",
+        "tnx_label": "ZX2820765",
+        "tnx_link": "#",
+        "invoice_link": "#",
+        "amount": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000031
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 20
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 22
+            }
+          }
+        }
+      },
+      {
+        "id": 11,
+        "datetime": "30 Mar 2022, 02:30PM",
+        "network": "Lightning Network",
+        "tnx_label": "LK2820790",
+        "tnx_link": "#",
+        "invoice_link": "#",
+        "amount": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000011
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 2
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 2
+            }
+          }
+        }
+      },
+      {
+        "id": 12,
+        "datetime": "30 Mar 2022, 01:21PM",
+        "network": "Lightning Network",
+        "tnx_label": "SD2823784",
+        "tnx_link": "#",
+        "invoice_link": "#",
+        "amount": {
+          "crypto": {
+            "code": "BTC",
+            "value": 0.000061
+          },
+          "fiat": {
+            "GBP": {
+              "code": "GBP",
+              "symbol": "£",
+              "position_of_symbol": "LEFT",
+              "value": 10
+            },
+            "USD": {
+              "code": "USD",
+              "symbol": "$",
+              "position_of_symbol": "LEFT",
+              "value": 12
+            }
+          }
+        }
+      }
+    ],
+    "settings-transactions-page-1": {
+      "page": 1,
+      "total_pages": 3,
+      "results": [
+        {
+          "id": 1,
+          "datetime": "14 Mar 2022, 02:30PM",
+          "network": "Lightning Network",
+          "tnx_label": "LK2820790",
+          "tnx_link": "#",
+          "invoice_link": "#",
+          "amount": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.000011
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 2
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 2.5
+              }
+            }
+          }
+        },
+        {
+          "id": 2,
+          "datetime": "04 Feb 2022, 01:21PM",
+          "network": "Lightning Network",
+          "tnx_label": "SD2823784",
+          "tnx_link": "#",
+          "invoice_link": "#",
+          "amount": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.000061
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 10
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 12.5
+              }
+            }
+          }
+        },
+        {
+          "id": 3,
+          "datetime": "21 Jan 2022, 10:30AM",
+          "network": "Lightning Network",
+          "tnx_label": "ZD2820452",
+          "tnx_link": "#",
+          "invoice_link": "#",
+          "amount": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.000074
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 14
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 15.5
+              }
+            }
+          }
+        },
+        {
+          "id": 4,
+          "datetime": "02 Jan 2022, 06:30PM",
+          "network": "Lightning Network",
+          "tnx_label": "QX2820783",
+          "tnx_link": "#",
+          "invoice_link": "#",
+          "amount": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.000061
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 10
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 10.5
+              }
+            }
+          }
+        },
+        {
+          "id": 5,
+          "datetime": "10 Jun 2023, 09:30PM",
+          "network": "Lightning Network",
+          "tnx_label": "ZX2820765",
+          "tnx_link": "#",
+          "invoice_link": "#",
+          "amount": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.000031
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 20
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 22.3
+              }
+            }
+          }
+        }
+      ]
+    },
+    "settings-transactions-page-2": {
+      "page": 2,
+      "total_pages": 3,
+      "results": [
+        {
+          "id": 6,
+          "datetime": "24 Mar 2022, 02:30PM",
+          "network": "Lightning Network",
+          "tnx_label": "LK2820790",
+          "tnx_link": "#",
+          "invoice_link": "#",
+          "amount": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.000011
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 2
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 2.2
+              }
+            }
+          }
+        },
+        {
+          "id": 7,
+          "datetime": "24 Feb 2022, 01:21PM",
+          "network": "Lightning Network",
+          "tnx_label": "SD2823784",
+          "tnx_link": "#",
+          "invoice_link": "#",
+          "amount": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.000061
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 10
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 12.1
+              }
+            }
+          }
+        },
+        {
+          "id": 8,
+          "datetime": "21 Jan 2022, 10:30AM",
+          "network": "Lightning Network",
+          "tnx_label": "ZD2820452",
+          "tnx_link": "#",
+          "invoice_link": "#",
+          "amount": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.000074
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 14
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 15.1
+              }
+            }
+          }
+        },
+        {
+          "id": 9,
+          "datetime": "22 Jan 2022, 06:30PM",
+          "network": "Lightning Network",
+          "tnx_label": "QX2820783",
+          "tnx_link": "#",
+          "invoice_link": "#",
+          "amount": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.000061
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 10
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 11.14
+              }
+            }
+          }
+        },
+        {
+          "id": 10,
+          "datetime": "20 Jun 2023, 09:30PM",
+          "network": "Lightning Network",
+          "tnx_label": "ZX2820765",
+          "tnx_link": "#",
+          "invoice_link": "#",
+          "amount": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.000031
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 20
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 21.1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "settings-transactions-page-3": {
+      "page": 3,
+      "total_pages": 3,
+      "results": [
+        {
+          "id": 11,
+          "datetime": "30 Mar 2022, 02:30PM",
+          "network": "Lightning Network",
+          "tnx_label": "LK2820790",
+          "tnx_link": "#",
+          "invoice_link": "#",
+          "amount": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.000011
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 2
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 2.1
+              }
+            }
+          }
+        },
+        {
+          "id": 12,
+          "datetime": "30 Mar 2022, 01:21PM",
+          "network": "Lightning Network",
+          "tnx_label": "SD2823784",
+          "tnx_link": "#",
+          "invoice_link": "#",
+          "amount": {
+            "crypto": {
+              "code": "BTC",
+              "value": 0.000061
+            },
+            "fiat": {
+              "GBP": {
+                "code": "GBP",
+                "symbol": "£",
+                "position_of_symbol": "LEFT",
+                "value": 10
+              },
+              "USD": {
+                "code": "USD",
+                "symbol": "$",
+                "position_of_symbol": "LEFT",
+                "value": 11.45
+              }
+            }
+          }
+        }
+      ]
+    },
+    "settings-transactions-page-not-existing": {
+      "page": 4,
+      "total_pages": 3,
+      "results": []
+    },
+    "settings-crypto-account-details": {
+      "btc_address": "17VZNX1SN5NtKa8UQFxwQbFeFc3iqRYhem",
+      "password": "nemonemo",
+      "twofa_code": 123456
+    }
+  }
