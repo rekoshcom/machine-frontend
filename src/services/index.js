@@ -1,0 +1,1 @@
+export { authTranslations } from './Auth/authTranslations';

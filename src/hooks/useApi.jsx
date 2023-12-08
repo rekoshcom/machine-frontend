@@ -1,26 +1,10 @@
 import axios from "axios";
-import { useEffect } from "react";
-import { useNavigate, useLocation } from 'react-router-dom';
 
 import {
-    setTokens,
-    isAuthPath,
-    getJwtToken,
-    removeTokens,
-    getRefreshToken,
     authTranslations,
-    triggerLoginEventListener,
-    triggerLogoutEventListener,
-    activateLoginEventListener,
-    activateLogoutEventListener
 } from '../services';
 
-
-// TODO: We may implement AbortController, link: https://03balogun.medium.com/practical-use-case-of-the-abortcontroller-and-axios-cancel-token-7c75bf85f3ea
 const useApi = () => {
-    const location = useLocation();
-    const navigate = useNavigate();
-
     const client = axios.create({
         baseURL: process.env.REACT_APP_API_URL,
         headers: {
@@ -29,56 +13,14 @@ const useApi = () => {
         },
     });
 
-    useEffect(() => {
-        activateLoginEventListener(navigate);
-        activateLogoutEventListener(navigate);
-    }, []);
-
-
-
-    /* ========================== */
-    /* ===== Login & Logout ===== */
-    /* ========================== */
-    const _login = (access_token, refresh_token) => {
-        setTokens(access_token, refresh_token);
-        triggerLoginEventListener();
-    };
-
-    const _logout = () => {
-        removeTokens();
-        triggerLogoutEventListener();
-    };
-
-    const redirectIfIsAuthPath = () => {
-        if (isAuthPath(location.pathname)) navigate('/');
-    };
-
 
 
     /* ================================================= */
     /* ===== Request :: Prepare, Execute, Complete ===== */
     /* ================================================= */
     /* === Headers === */
-    const _getHeaderAuthorizationIfAny = () => {
-        const access_token = getJwtToken();
-        return access_token
-            ? { 'Authorization': 'Bearer ' + access_token }
-            : {}
-    };
-
-    const _getHeaderRefresh = () => {
-        const refresh_token = getRefreshToken();
-        return refresh_token
-            ? { 'Authorization': 'Bearer ' + refresh_token }
-            : {}
-    };
-
-    const _getHeaderWithCredentials = () => {
-        return { 'Access-Control-Allow-Credentials': true }
-    };
-
-    const _combineHeaders = (headerOne, headerTwo) => {
-        return Object.assign({}, headerOne, headerTwo);
+    const _getHeader = () => {
+        return {}
     };
 
     /* === Responses === */
@@ -119,65 +61,15 @@ const useApi = () => {
     };
 
     /* === Request Handlers === */
-    const _handle_refresh = async (
-        method,
-        url,
-        payload,
-        error,
-        requireRefresh,
-        redirectIfRefreshFails
-    ) => {
-        if (error.response.status !== 401) return error.response;
-        if (!(requireRefresh && getRefreshToken())) {
-            _logout();
-            if (redirectIfRefreshFails) {
-                navigate('/login');
-                return error.response;
-            }
-        }
-
-        return await api.refresh().then(async responseRefresh => {
-            if (!responseRefresh.ok) return responseRefresh;
-
-            switch(method) {
-                case 'POST':
-                    return await _post(url, payload, false);
-                case 'PUT':
-                    return await _put(url, payload, false);
-                case 'GET':
-                    return await _get(url, payload, false);
-                case 'DELETE':
-                    return await _delete(url, payload, false);
-                default:
-                    break;
-            }
-        });
-    };
-
-    const _get = async (
-        url,
-        payload = {},
-        requireRefresh = true,
-        redirectIfRefreshFails = true
-    ) => {
+    const _get = async (url, payload = {}) => {
         try {
-            const options = { headers: _getHeaderAuthorizationIfAny() };
+            const options = { headers: _getHeader() };
             const urlParams = new URLSearchParams(payload).toString();
             const response = await client.get(
                     url + (urlParams === '' ? '' : '?' + urlParams),
                     options
                 )
-                .then(response => response)
-                .catch(async error => {
-                    return await _handle_refresh(
-                        'GET',
-                        url,
-                        payload,
-                        error,
-                        requireRefresh,
-                        redirectIfRefreshFails
-                    );
-                });
+                .then(response => response);
 
             if (Object.hasOwn(response, 'error') && Object.hasOwn(response, 'ok')) {
                 return response;
@@ -191,26 +83,11 @@ const useApi = () => {
         }
     };
 
-    const _post = async (
-        url,
-        payload = {},
-        requireRefresh = true,
-        redirectIfRefreshFails = true
-    ) => {
+    const _post = async (url, payload = {}) => {
         try {
-            const options = { headers: _getHeaderAuthorizationIfAny() };
+            const options = { headers: _getHeader() };
             const response = await client.post(url, payload, options)
-                .then(response => response)
-                .catch(async error => {
-                    return await _handle_refresh(
-                        'POST',
-                        url,
-                        payload,
-                        error,
-                        requireRefresh,
-                        redirectIfRefreshFails
-                    );
-                });
+                .then(response => response);
 
             if (Object.hasOwn(response, 'error') && Object.hasOwn(response, 'ok')) {
                 return response;
@@ -224,26 +101,11 @@ const useApi = () => {
         }
     };
 
-    const _put = async (
-        url,
-        payload = {},
-        requireRefresh = true,
-        redirectIfRefreshFails = true
-    ) => {
+    const _put = async (url, payload = {}) => {
         try {
-            const options = { headers: _getHeaderAuthorizationIfAny() };
+            const options = { headers: _getHeader() };
             const response = await client.put(url, payload, options)
                 .then(response => response)
-                .catch(async error => {
-                    return await _handle_refresh(
-                        'PUT',
-                        url,
-                        payload,
-                        error,
-                        requireRefresh,
-                        redirectIfRefreshFails
-                    );
-                });
 
             if (Object.hasOwn(response, 'error') && Object.hasOwn(response, 'ok')) {
                 return response;
@@ -257,29 +119,14 @@ const useApi = () => {
         }
     };
 
-    const _delete = async (
-        url,
-        payload = {},
-        requireRefresh = true,
-        redirectIfRefreshFails = true
-    ) => {
+    const _delete = async (url, payload = {}) => {
         try {
             const options = {
                 data: payload,
-                headers: _getHeaderAuthorizationIfAny()
+                headers: _getHeader()
             };
             const response = await client.delete(url, options)
-                .then(response => response)
-                .catch(async error => {
-                    return await _handle_refresh(
-                        'DELETE',
-                        url,
-                        payload,
-                        error,
-                        requireRefresh,
-                        redirectIfRefreshFails
-                    );
-                });
+                .then(response => response);
 
             if (Object.hasOwn(response, 'error') && Object.hasOwn(response, 'ok')) {
                 return response;
@@ -299,7 +146,18 @@ const useApi = () => {
     /* ===== Endpoints ===== */
     /* ===================== */
     const api = {
-
+        getState: async function() {
+            const url = '/state';
+            return await _get(url);
+        },
+        reboot: async function() {
+            const url = '/reboot';
+            return await _post(url);
+        },
+        shutdown: async function() {
+            const url = '/shutdown';
+            return await _post(url);
+        },
     };
 
     return api;
