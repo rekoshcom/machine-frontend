@@ -73,16 +73,6 @@ const StateContextProvider = ({children}) => {
         const elementImgWaterBottleBig = document.getElementById("imgWaterBottleBig");
 
         switch (objectRecognitionState) {
-            case 'NOT_INSERTED':
-                elementCircle.style.display = 'block';
-                elementRectangle.style.display = 'none';
-                elementImgSuccess.style.display = 'none';
-                elementImgError.style.display = 'none';
-
-                elementImgWaterBottleBig.style.transform = `rotate(0deg)`;
-                elementImgWaterBottleBig.style.top = `13%`;
-                elementImgWaterBottleBig.style.left = `18%`;
-                break;
             case 'INSERTED':
                 elementCircle.style.display = 'none';
                 elementRectangle.style.display = 'block';
@@ -112,6 +102,17 @@ const StateContextProvider = ({children}) => {
                 elementImgWaterBottleBig.style.transform = `rotate(-14deg)`;
                 elementImgWaterBottleBig.style.top = `7%`;
                 elementImgWaterBottleBig.style.left = `13%`;
+                break;
+            case 'NOT_INSERTED':
+            default:
+                elementCircle.style.display = 'block';
+                elementRectangle.style.display = 'none';
+                elementImgSuccess.style.display = 'none';
+                elementImgError.style.display = 'none';
+
+                elementImgWaterBottleBig.style.transform = `rotate(0deg)`;
+                elementImgWaterBottleBig.style.top = `13%`;
+                elementImgWaterBottleBig.style.left = `18%`;
                 break;
         }
 

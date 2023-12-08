@@ -49,7 +49,7 @@ const Target = () => {
                     <div className="columns mt-2 is-flex is-vcentered mb-0">
                         <div className="column is-4 has-text-right">
                             <span>
-                                <img src={imgWaterBottle}/>
+                                <img src={imgWaterBottle} alt="Bottle of water"/>
                             </span>
                         </div>
                         <div className="column is-8 has-text-left title">
@@ -74,7 +74,7 @@ const Target = () => {
 
                     <div className="columns mt-2 is-flex is-vcentered">
                         <div className="column is-2">
-                            <img src={imgDataBio}/>
+                            <img src={imgDataBio} alt="icon bio"/>
                         </div>
                         <div className="column is-10">
                             {
@@ -92,7 +92,7 @@ const Target = () => {
 
                     <div className="columns mt-2 is-flex is-vcentered">
                         <div className="column is-2">
-                            <img src={imgDataBalance}/>
+                            <img src={imgDataBalance} alt="data balance"/>
                         </div>
                         <div className="column is-4">
                             {
@@ -102,7 +102,7 @@ const Target = () => {
                             }
                         </div>
                         <div className="column is-2">
-                            <img src={imgDataMoneyBag}/>
+                            <img src={imgDataMoneyBag} alt="Data a bag of money"/>
                         </div>
                         <div className="column is-4">
                             {

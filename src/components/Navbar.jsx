@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <aside className="menu">
             <div className="logo">
-                <img src={logo}/>
+                <img src={logo} alt="Logo of ReKosh"/>
             </div>
             <ul className="menu-list mt-6">
                 <li>
@@ -29,8 +29,8 @@ const Navbar = () => {
                     >
                         {
                             location.pathname === '/'
-                            ? <img src={imgNavbarTargetActive} className="w-4 h-4"/>
-                            : <img src={imgNavbarTargetInactive} className="w-4 h-4" />
+                            ? <img src={imgNavbarTargetActive} className="w-4 h-4" alt="Navbar active target page"/>
+                            : <img src={imgNavbarTargetInactive} className="w-4 h-4" alt="Navbar inactive target page"/>
                         }
                     </Link>
                 </li>
@@ -39,15 +39,15 @@ const Navbar = () => {
                         to={`/info`}
                         id="info`"
                         className={`navbar-item has-text-centered ${
-                            location.pathname == '/info'
+                            location.pathname === '/info'
                             ? 'is-active'
                             : ''
                         }`}
                     >
                         {
-                            location.pathname == '/info'
-                            ? <img src={imgNavbarInfoActive} className="w-4 h-4" />
-                            : <img src={imgNavbarInfoInactive} className="w-4 h-4" />
+                            location.pathname === '/info'
+                            ? <img src={imgNavbarInfoActive} className="w-4 h-4" alt="Navbar active info page"/>
+                            : <img src={imgNavbarInfoInactive} className="w-4 h-4" alt="Navbar inactive info page"/>
                         }
                     </Link>
                 </li>

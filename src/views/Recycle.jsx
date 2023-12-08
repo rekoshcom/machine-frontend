@@ -15,9 +15,9 @@ const Recycle = () => {
                 <div id="circle"></div>
                 <div id="rectangle"></div>
 
-                <img id="imgWaterBottleBig" src={imgWaterBottleBig} />
-                <img id="imgSuccess" src={imgSuccess} />
-                <img id="imgError" src={imgError} />
+                <img id="imgWaterBottleBig" src={imgWaterBottleBig} alt="Big bottle of water"/>
+                <img id="imgSuccess" src={imgSuccess} alt="Success"/>
+                <img id="imgError" src={imgError} alt="Error"/>
             </div>
             <div className="content has-text-centered mt-auto pb-6">
                 {
