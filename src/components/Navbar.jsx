@@ -3,39 +3,52 @@ import { Link, useLocation } from 'react-router-dom';
 
 import logo from '../assets/img/logo.png';
 
+import imgNavbarInfoActive from '../assets/img/navbar-info-active.png';
+import imgNavbarInfoInactive from '../assets/img/navbar-info-inactive.png';
+import imgNavbarTargetActive from '../assets/img/navbar-target-active.png';
+import imgNavbarTargetInactive from '../assets/img/navbar-target-inactive.png';
+
 const Navbar = () => {
     const location = useLocation();
 
     return (
-        <aside class="menu">
-            <div class="logo">
-                <img src={logo} width="50"/>
+        <aside className="menu">
+            <div className="logo">
+                <img src={logo}/>
             </div>
-            <ul class="menu-list">
+            <ul className="menu-list mt-6">
                 <li>
                     <Link
                         to={`/`}
                         id="target"
-                        className={`navbar-item ${
+                        className={`navbar-item has-text-centered ${
                             location.pathname === '/'
                             ? 'is-active'
                             : ''
                         }`}
                     >
-                        Target
+                        {
+                            location.pathname === '/'
+                            ? <img src={imgNavbarTargetActive} className="w-4 h-4"/>
+                            : <img src={imgNavbarTargetInactive} className="w-4 h-4" />
+                        }
                     </Link>
                 </li>
                 <li>
                     <Link
-                        to={`/settings`}
-                        id="settings`"
-                        className={`navbar-item ${
-                            location.pathname === '/settings`'
+                        to={`/info`}
+                        id="info`"
+                        className={`navbar-item has-text-centered ${
+                            location.pathname == '/info'
                             ? 'is-active'
                             : ''
                         }`}
                     >
-                        Settings
+                        {
+                            location.pathname == '/info'
+                            ? <img src={imgNavbarInfoActive} className="w-4 h-4" />
+                            : <img src={imgNavbarInfoInactive} className="w-4 h-4" />
+                        }
                     </Link>
                 </li>
             </ul>
