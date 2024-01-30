@@ -150,6 +150,18 @@ const useApi = () => {
             const url = '/state';
             return await _get(url);
         },
+        start: async function() {
+            const url = '/start';
+            return await _post(url);
+        },
+        stop: async function() {
+            const url = '/stop';
+            return await _post(url);
+        },
+        auth: async function(pin) {
+            const url = '/auth?pin=' + pin;
+            return await _get(url);
+        },
         reboot: async function() {
             const url = '/reboot';
             return await _post(url);
