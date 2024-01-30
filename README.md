@@ -1,20 +1,21 @@
 # Installation
+
 Copy `.env.example` and create a new file `.env`, set the required parameters.
 
 Next, run the following command to install all required packaghes:
+
 ```
 npm install
 ```
 
 For your information, if you'd like to start a new React project you'll have to
 run:
+
 ```
 npx create-react-app .
 ```
 
 in the directory where you'd like to initialise a React app.
-
-
 
 # Run
 
@@ -29,6 +30,7 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 To run the test API:
+
 ```
 npm run json-server
 ```
@@ -58,43 +60,39 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-
-
 # API endpoints for communication with external services
+
 The API URL is in .env file.
 
 The API endpoints are documented in `/src/hooks/useApi.jsx` file.
 
-
-
 # Run JSON server with test data
+
 For testing the React application we use an internal JSON server that acts as an API.
 
 To run the JSON server execute the following command in the Terminal:
+
 ```
 npx json-server --watch data/db.json --routes data/routes.json --port 3001
 ```
 
 You can replace port 3001 with any port you prefer.
 
-
-
 # Regenerate the CSS styles from the SaSS file
+
 ```
 sass src/assets/css/styles.scss:src/assets/css/styles.css
 ```
 
-
-
 # Add SSH key
+
 ```
 eval $(ssh-agent -s)
 ssh-add -K ~/.ssh/FILE_NAME_OF_THE_PRIVATE_SSH_KEY
 ```
 
-
-
 # Third-party services
+
 Bulma - https://bulma.io/documentation/
 
 Bulma Extensions - https://wikiki.github.io/form/switch/
@@ -112,3 +110,31 @@ JSON server (for simulating an API) - https://www.npmjs.com/package/json-server#
 React Router Dom v6 - https://reactrouter.com/docs/en/v6/hooks/use-outlet
 
 Axios - https://www.digitalocean.com/community/tutorials/react-axios-react
+
+# SVG
+
+# Issues
+
+If you have issues loading SVG's. In the /node_modules folder, open the react-scripts/config/webpack.config.js file and update the use property of the SVG section of the config objects as shown below:
+
+```
+module.exports = {
+  // Other configuration options...
+  module: {
+    rules: [
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              throwIfNamespace: false,
+            },
+          },
+          'svg-url-loader',
+        ],
+      },
+    ],
+  },
+};
+```

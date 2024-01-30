@@ -47,6 +47,8 @@
     ]
   },
   "devDependencies": {
-    "json-server": "^0.17.4"
+    "@svgr/webpack": "^8.1.0",
+    "json-server": "^0.17.4",
+    "svg-url-loader": "^8.0.0"
   }
 }
