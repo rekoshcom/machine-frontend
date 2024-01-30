@@ -7,16 +7,20 @@
 /* ===== Colour Palette ===== */
 /* ========================== */
 $background-purple-dark: #030722;
-$background-purple: #18172D;
-$background-purple-light: #272848;
+$background-purple: #1d1c33;
+$background-purple-light: #28284C;
 $recycle-blue: #4dbbec;
+$greenish: #01EAC5;
+$purple: #712EDA;
+$redish: #FF2B2B;
+$grayish: #ababab;
 
 @import "../../../node_modules/bulma/bulma.sass";
 
 
 
 /* ==================== */
-/* ===== Genersal ===== */
+/* ===== General ===== */
 /* ==================== */
 * {
     margin: 0;
@@ -149,7 +153,57 @@ h1 {
     max-height: unset !important;
 }
 
+.icon-menu-active {
+    fill: white;
+}
 
+.icon-menu-inactive {
+    fill: #712EDA;
+}
+
+.icon-standard {
+    fill: $greenish;
+    width: 50px;
+    height: 50px;
+}
+
+.icon-standard-large {
+    fill: $greenish;
+    width: 120px;
+    height: 120px;
+}
+
+.icon-connected {
+    fill: $grayish;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-disconnected {
+    fill: $redish;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-no-error {
+    fill: $grayish;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-error {
+    fill: $redish;
+    width: 40px;
+    height: 40px;
+}
+
+button.is-primary {
+    background-color: $greenish;
+}
+
+button.is-danger {
+    background-color: $redish
+}
 
 /* =================== */
 /* ===== Sidebar ===== */
@@ -169,9 +223,9 @@ h1 {
     margin: 0;
 }
 .logo {
-    padding: 0;
-    margin: 0 auto;
     width: 80%;
+    margin: 0 auto;
+    padding: 0;
     display: flex;
     justify-content: center;
 }
@@ -205,6 +259,30 @@ a.navbar-item.is-active {
 .meter {
     position: relative;
 }
+
+.meter-data {            
+    top: 15%; 
+    width: 100%;
+    position: absolute;    
+}
+
+
+    .meter-data .data-top {
+        color: $white;
+        width: 100%;
+        font-size: 20px;
+    }
+
+        .area-data .data-top .title {
+            color: $white;
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: -30px 
+        }
+
+        .area-data .data-top .subtitle {
+            color: $grayish;
+        }
 
 .meter-hand {
     width: 1px;
@@ -291,8 +369,8 @@ a.navbar-item.is-active {
     // progress-of-collected-percentage Styles
 .progress-of-collected-percentage {
     position: relative;
-    width: 250px;
-    height: 125px;
+    width: 450px;
+    height: 225px;
     overflow: hidden;
 }
 
@@ -305,10 +383,10 @@ a.navbar-item.is-active {
 content: '';
     width: inherit;
     height: inherit;
-    border: 15px solid $background-purple-light;
+    border: 25px solid $background-purple-light;
     border-bottom: none;
-    border-top-left-radius: 175px;
-    border-top-right-radius: 175px;
+    border-top-left-radius: 225px;
+    border-top-right-radius: 225px;
 }
 
 .progress-of-collected-percentage::after {
@@ -327,10 +405,10 @@ content: '';
     left: 0;
     width: inherit;
     height: inherit;
-    border: 15px solid;
+    border: 25px solid;
     border-top: none;
-    border-bottom-left-radius: 175px;
-    border-bottom-right-radius: 175px;
+    border-bottom-left-radius: 225px;
+    border-bottom-right-radius: 225px;
     transform-origin: 50% 0;
     animation-fill-mode: forwards;
     animation-duration: .4s;
@@ -341,13 +419,13 @@ content: '';
 
 .progress-of-collected-percentage li:nth-child(1) {
     z-index: 4;
-    border-color: #8dc34a;
+    border-color: $purple;
     animation-name: rotate-one;
 }
 
 .progress-of-collected-percentage li:nth-child(2) {
     z-index: 3;
-    border-color: #8dc34a;
+    border-color: $purple;
     animation-name: rotate-two;
     animation-delay: 4s;
     transition: transform 2s ease-in-out;
@@ -355,14 +433,14 @@ content: '';
 
 .progress-of-collected-percentage li:nth-child(3) {
     z-index: 2;
-    border-color: #8dc34a;
+    border-color: $purple;
     animation-name: rotate-three;
     animation-delay: .8s;
 }
 
 .progress-of-collected-percentage li:nth-child(4) {
     z-index: 1;
-    border-color: #8dc34a;
+    border-color: $purple;
     animation-name: rotate-four;
     animation-delay: 1.2s;
 }
@@ -393,19 +471,11 @@ content: '';
     padding: 0;
     margin: 0;
     border-top: 0;
-    border-right: 1px solid $background-purple-dark;
+    // border-right: 1px solid $background-purple-dark;
     border-bottom: 0;
     border-left: 0;
     background-color: $background-purple;
 }
-
-    .area-data .data-bottom {
-        color: $white;
-        width: 100%;
-        font-size: 20px;
-        border-top: 2px solid $background-purple;
-        background-color: $background-purple-light;
-    }
 
     .area-data .data-top {
         color: $white;
@@ -419,6 +489,21 @@ content: '';
             font-weight: bold;
         }
 
+    .area-data .data-bottom {
+        color: $white;        
+        font-size: 20px;
+        background-color: $background-purple-light;
+    }
+
+    .area-data .data-bottom span {
+        color: $white;        
+        font-weight: 300;
+    }
+
+    .area-data .data-bottom strong {
+        color: $white;        
+    }
+
 
 
 /* ======================= */
@@ -427,54 +512,87 @@ content: '';
 .area-action {
     height: 100%;
     // width: 44% !important;
-    background-color: $background-purple;
-}
-
-#circle {
-    width: 200px;
-    height: 200px;
     background-color: $background-purple-light;
-    border: 10px solid $recycle-blue;
-    border-radius: 50%;
-    position: absolute;
-    top: 35%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    // display: none;
 }
 
-#rectangle {
-    width: 370px;
-    height: 200px;
-    background-color: $background-purple-light;
-    border: 10px solid $recycle-blue;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
+#recycleTimer {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
 }
 
-#imgWaterBottleBig {
+#recycleBottle {
+    width: 140px;
     position: absolute;
-    top: 13%;
-    left: 18%;
-    height: auto;
     transition: transform 1s ease, top 1s ease, left 1s ease;
 }
 
-#imgSuccess {
+#recycleNumberOfEnteredItems {
     position: absolute;
-    top: 5%;
-    left: 11%;
-    height: auto;
-    display: none;
+    top: 52%;
+    left: 53%;
 }
 
-#imgError {
+    #recycleNumberOfEnteredItems .x {
+        color: white;
+        font-size: 2.3rem;
+        font-weight: bold;
+    }
+
+#recycleCount {
+    color: $greenish;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+#recycleIncorrectItem {
     position: absolute;
-    top: 13%;
-    left: 21%;
+    width: 100%;
+    bottom: 16%;
+    color: $redish;
+}
+
+#recycleTextSuccess {
+    color: $white;
+    position: absolute;
+    width: 100%;
+    bottom: 16%;
+}
+
+button#recycleStartButton {
+    color: $purple;
+    background-color: $greenish;
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+
+}
+
+button#recycleStopButton {
+    color: white;
+    background-color: $redish;
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;    
+}
+
+#recycleImgSuccess {
+    position: absolute;
+    top: 12%;
+    left: 11%;
     height: auto;
     display: none;
 }
@@ -484,7 +602,7 @@ content: '';
 /* ===================== */
 /* ===== Info Page ===== */
 /* ===================== */
-.info {
+.info, .settings {
     color: $white;
-    font-size: 20px;
+    font-size: 1rem;
 }
