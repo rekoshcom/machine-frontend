@@ -3,10 +3,9 @@ import { Link, useLocation } from 'react-router-dom';
 
 import logo from '../assets/img/logo.png';
 
-import imgNavbarInfoActive from '../assets/img/navbar-info-active.png';
-import imgNavbarInfoInactive from '../assets/img/navbar-info-inactive.png';
-import imgNavbarTargetActive from '../assets/img/navbar-target-active.png';
-import imgNavbarTargetInactive from '../assets/img/navbar-target-inactive.png';
+import { ReactComponent as SvgInfo } from '../assets/svg/svgInfo.svg';
+import { ReactComponent as SvgTarget } from '../assets/svg/svgTarget.svg';
+import { ReactComponent as SvgSettings } from '../assets/svg/svgSettings.svg';
 
 const Navbar = () => {
     const location = useLocation();
@@ -27,11 +26,11 @@ const Navbar = () => {
                             : ''
                         }`}
                     >
-                        {
+                        <SvgTarget className={`w-4 h-4 ${
                             location.pathname === '/'
-                            ? <img src={imgNavbarTargetActive} className="w-4 h-4" alt="Navbar active target page"/>
-                            : <img src={imgNavbarTargetInactive} className="w-4 h-4" alt="Navbar inactive target page"/>
-                        }
+                            ? 'icon-menu-active'
+                            : 'icon-menu-inactive'
+                        }`}/>
                     </Link>
                 </li>
                 <li>
@@ -44,11 +43,28 @@ const Navbar = () => {
                             : ''
                         }`}
                     >
-                        {
+                        <SvgInfo className={`w-4 h-4 ${
                             location.pathname === '/info'
-                            ? <img src={imgNavbarInfoActive} className="w-4 h-4" alt="Navbar active info page"/>
-                            : <img src={imgNavbarInfoInactive} className="w-4 h-4" alt="Navbar inactive info page"/>
-                        }
+                            ? 'icon-menu-active'
+                            : 'icon-menu-inactive'
+                        }`}/>
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to={`/settings`}
+                        id="settings`"
+                        className={`navbar-item has-text-centered ${
+                            location.pathname === '/settings'
+                            ? 'is-active'
+                            : ''
+                        }`}
+                    >
+                        <SvgSettings className={`w-4 h-4 ${
+                            location.pathname === '/settings'
+                            ? 'icon-menu-active'
+                            : 'icon-menu-inactive'
+                        }`}/>
                     </Link>
                 </li>
             </ul>

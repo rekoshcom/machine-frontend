@@ -8,7 +8,10 @@ const StateContextProvider = ({children}) => {
     const api = useApi();
     const [state, setState] = useState(null);
     const [isGetStatePending, setIsGetStatePending] = useState(false);
-    const [objectRecognitionState, setObjectRecognitionState] = useState('NOT_INSERTED');
+
+    const [sessionState, setSessionState] = useState('ON_HOLD');
+    const [sessionItems, setSessionItems] = useState(0);
+    const [prevSessionState, setPrevSessionState] = useState('ON_HOLD');
 
     function percentageToDegrees(percentage) {
         return (180 * percentage) / 100;
@@ -28,6 +31,13 @@ const StateContextProvider = ({children}) => {
         }
     }
 
+    function formatNumberWithSpace(number) {
+        return number.toLocaleString('en-US', {
+            minimumFractionDigits: 2,
+            useGrouping: true,
+        }).replace(',', ' ');
+    }
+
     async function getState() {
         if (isGetStatePending) return;
 
@@ -39,25 +49,27 @@ const StateContextProvider = ({children}) => {
                 let data = response.data;
 
                 // Calculate remaining
-                let remaining = data.goal_of_collected_items - data.collected.items;
-                let remaining_in_percentage = 100 - (remaining * 100 / data.goal_of_collected_items);
+                let remaining = data.target - data.collected.items;
+                let remaining_in_percentage = 100 - (remaining * 100 / data.target);
                 let remaining_in_degree = percentageToDegrees(remaining_in_percentage);
 
                 data['remaining'] = remaining.toLocaleString('fr-FR').replace(/,/g, ' ');
                 data['remaining_in_percentage'] = remaining_in_percentage.toFixed(2);
 
-                // Format numbers
-                data.eco_influence.amount = data.eco_influence.amount.toLocaleString('en-US', { minimumFractionDigits: 2 });
+                // Format numbers                
                 data.collected.items = data.collected.items.toLocaleString('fr-FR').replace(/,/g, ' ');
-                data.collected.weight.amount = data.collected.weight.amount.toLocaleString('en-US', { minimumFractionDigits: 2 });
-                data.collected.finances.amount = data.collected.finances.amount.toLocaleString('en-US', { minimumFractionDigits: 2 });
+                data.collected.weight.amount = formatNumberWithSpace(data.collected.weight.amount);
+                data.collected.finances.amount = formatNumberWithSpace(data.collected.finances.amount);
+                data.eco_influence.cotwo.amount = formatNumberWithSpace(data.eco_influence.cotwo.amount);
+                data.eco_influence.energy.amount = formatNumberWithSpace(data.eco_influence.energy.amount);
 
                 // Actions related to the meter
                 rotateTheMeter(remaining_in_degree);
-                rotateTheMeterHand(remaining_in_degree);
+                //rotateTheMeterHand(remaining_in_degree);
 
                 // Recycling
-                setObjectRecognitionState(data.object_recognition_state)
+                setSessionItems(data.session.items);
+                setSessionState(data.session.status)
 
                 setState(data);
             }
@@ -65,62 +77,143 @@ const StateContextProvider = ({children}) => {
     };
 
     useEffect(() => {
-        const elementCircle = document.getElementById("circle");
-        const elementRectangle = document.getElementById("rectangle");
+        const elementRecycleTitle = document.getElementById("recycleTitle");
 
-        const elementImgError = document.getElementById("imgError");
-        const elementImgSuccess = document.getElementById("imgSuccess");
-        const elementImgWaterBottleBig = document.getElementById("imgWaterBottleBig");
+        const elementRecycleTDuration = document.getElementById("recycleTDuration");
+        const elementRecycleTimer = document.getElementById("recycleTimer");
 
-        switch (objectRecognitionState) {
-            case 'INSERTED':
-                elementCircle.style.display = 'none';
-                elementRectangle.style.display = 'block';
-                elementImgSuccess.style.display = 'none';
-                elementImgError.style.display = 'none';
+        const elementRecycleBottle = document.getElementById("recycleBottle");
 
-                elementImgWaterBottleBig.style.transform = `rotate(-14deg)`;
-                elementImgWaterBottleBig.style.top = `7%`;
-                elementImgWaterBottleBig.style.left = `13%`;
-                break;
-            case 'CORRECT_OBJECT':
-                elementCircle.style.display = 'none';
-                elementRectangle.style.display = 'block';
-                elementImgSuccess.style.display = 'block';
-                elementImgError.style.display = 'none';
+        const elementRecycleNumberOfEnteredItems = document.getElementById("recycleNumberOfEnteredItems");
+        const elementRecycleIncorrectItem = document.getElementById("recycleIncorrectItem");        
 
-                elementImgWaterBottleBig.style.transform = `rotate(-14deg)`;
-                elementImgWaterBottleBig.style.top = `7%`;
-                elementImgWaterBottleBig.style.left = `13%`;
-                break;
-            case 'INCORRECT_OBJECT':
-                elementCircle.style.display = 'none';
-                elementRectangle.style.display = 'block';
-                elementImgSuccess.style.display = 'none';
-                elementImgError.style.display = 'block';
+        const elementRecycleImgSuccess = document.getElementById("recycleImgSuccess");        
+        const elementRecycleTextSuccess = document.getElementById("recycleTextSuccess");
 
-                elementImgWaterBottleBig.style.transform = `rotate(-14deg)`;
-                elementImgWaterBottleBig.style.top = `7%`;
-                elementImgWaterBottleBig.style.left = `13%`;
-                break;
-            case 'NOT_INSERTED':
-            default:
-                elementCircle.style.display = 'block';
-                elementRectangle.style.display = 'none';
-                elementImgSuccess.style.display = 'none';
-                elementImgError.style.display = 'none';
+        const elementRecycleStartButton = document.getElementById("recycleStartButton");
+        const elementRecycleStopButton = document.getElementById("recycleStopButton");
 
-                elementImgWaterBottleBig.style.transform = `rotate(0deg)`;
-                elementImgWaterBottleBig.style.top = `13%`;
-                elementImgWaterBottleBig.style.left = `18%`;
-                break;
+        function setInProgress() {
+            elementRecycleTitle.style.display = 'none';
+            elementRecycleTDuration.style.display = 'block';
+            elementRecycleTimer.style.display = 'block';
+            
+            elementRecycleBottle.style.display = 'block';
+            elementRecycleBottle.style.width = `80px`;
+            elementRecycleBottle.style.transform = `rotate(0deg)`;
+            elementRecycleBottle.style.top = `33%`;
+            elementRecycleBottle.style.left = `27%`;
+
+            elementRecycleIncorrectItem.style.display = 'none';
+
+            elementRecycleNumberOfEnteredItems.style.display = 'block';                
+            
+            elementRecycleImgSuccess.style.display = 'none';
+
+            elementRecycleTextSuccess.style.display = 'none';            
+            elementRecycleStartButton.style.display = 'none';
+            elementRecycleStopButton.style.display = 'block';
         }
 
-    }, [objectRecognitionState]);
+        function setIncorrectObject() {
+            elementRecycleTitle.style.display = 'none';
+            elementRecycleTDuration.style.display = 'block';
+            elementRecycleTimer.style.display = 'block';
+            
+            elementRecycleBottle.style.display = 'block';
+            elementRecycleBottle.style.width = `80px`;
+            elementRecycleBottle.style.transform = `rotate(0deg)`;
+            elementRecycleBottle.style.top = `33%`;
+            elementRecycleBottle.style.left = `27%`;
+
+            elementRecycleIncorrectItem.style.display = 'block';
+
+            elementRecycleNumberOfEnteredItems.style.display = 'block';                
+            
+            elementRecycleImgSuccess.style.display = 'none';
+
+            elementRecycleTextSuccess.style.display = 'none';            
+            elementRecycleStartButton.style.display = 'none';
+            elementRecycleStopButton.style.display = 'block';
+        }
+
+        function setSuccess() {
+            elementRecycleTitle.style.display = 'none';
+            elementRecycleTDuration.style.display = 'none';
+            elementRecycleTimer.style.display = 'none';
+            
+            elementRecycleBottle.style.display = 'none';
+            elementRecycleBottle.style.width = `140px`;
+            elementRecycleBottle.style.transform = `rotate(90deg)`;
+            elementRecycleBottle.style.top = `5%`;
+            elementRecycleBottle.style.left = `32%`;
+
+            elementRecycleIncorrectItem.style.display = 'none';
+
+            elementRecycleNumberOfEnteredItems.style.display = 'none';                
+            
+            elementRecycleImgSuccess.style.display = 'block';
+
+            elementRecycleTextSuccess.style.display = 'block';                
+            elementRecycleStartButton.style.display = 'none';
+            elementRecycleStopButton.style.display = 'none';
+        }
+
+        function setOnHold() {
+            elementRecycleTitle.style.display = 'block';
+            elementRecycleTDuration.style.display = 'none';
+            elementRecycleTimer.style.display = 'none';
+            
+            elementRecycleBottle.style.display = 'block';
+            elementRecycleBottle.style.width = `140px`;
+            elementRecycleBottle.style.transform = `rotate(90deg)`;
+            elementRecycleBottle.style.top = `5%`;
+            elementRecycleBottle.style.left = `32%`;
+
+            elementRecycleIncorrectItem.style.display = 'none';
+
+            elementRecycleNumberOfEnteredItems.style.display = 'none';                
+            
+            elementRecycleImgSuccess.style.display = 'none';
+
+            elementRecycleTextSuccess.style.display = 'none';                
+            elementRecycleStartButton.style.display = 'block';
+            elementRecycleStopButton.style.display = 'none';
+        }
+
+        if (
+            prevSessionState !== "ON_HOLD"
+            &&
+            sessionState === "ON_HOLD"
+            &&            
+            sessionItems > 0
+        ) {
+            setSuccess();    
+
+            setTimeout(() => {
+                setOnHold();
+            }, "3000");
+        } else {
+            switch (sessionState) {  
+                case 'IN_PROGRESS':
+                    setInProgress();
+                    break;                      
+                case 'INCORRECT_OBJECT':
+                    setIncorrectObject();
+                    break;
+                case 'ON_HOLD':
+                default:
+                    setOnHold();
+                    break;
+            }
+        }        
+
+        setPrevSessionState(sessionState);
+    }, [sessionState]);
 
 
     useEffect(() => {
-        const timeoutInterval = 2000;
+        const timeoutInterval = 500;
 
         const interval = setInterval(() => {
             getState();

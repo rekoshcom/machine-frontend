@@ -1,51 +1,106 @@
 import React from 'react';
+import { useState, useEffect, useRef } from "react";
 
+import { useApi } from '../hooks';
 import { useStateContext } from '../context';
 
-import imgError from '../assets/img/error.png';
 import imgSuccess from '../assets/img/success.png';
-import imgWaterBottleBig from '../assets/img/water-bottle-big.png';
+import imgSoftDrink from '../assets/img/soft-drink.png';
+
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+
+    return `${formattedMinutes}:${formattedSeconds}`;
+}
 
 const Recycle = () => {
+    const sessionDuraction = 30;
+
+    const api = useApi();
+    const intervalRef = useRef(0);
     const stateContext = useStateContext();
+    const [ timeLeft, setTimeLeft ] = useState(sessionDuraction);
+    const [prevSessionState, setPrevSessionState] = useState('ON_HOLD');
+
+    function handleStart() {
+        api.start();
+    }
+
+    function handleStop() {
+        api.stop().then(response => {
+            if (response.ok) {
+                stopCountdown();
+            } else {
+                
+            }
+        });
+    }
+
+    function startCountdown() {    
+        setTimeLeft(sessionDuraction);
+    
+        const intervalId = setInterval(() => {            
+            setTimeLeft(prevCountDown => {    
+                if (prevCountDown <= 0) {
+                    clearInterval(intervalId);
+                    handleStop();
+                    return 0;
+                }
+    
+                return prevCountDown - 1;
+            });
+        }, 1000);
+
+        intervalRef.current = intervalId;
+    }    
+
+    function stopCountdown() {
+        clearInterval(intervalRef.current);
+    }
+
+    useEffect(() => {        
+        if (
+            prevSessionState !== "INCORRECT_OBJECT" 
+            && 
+            stateContext.state?.session?.status === "IN_PROGRESS"
+        )
+        {            
+            startCountdown();        
+        }
+
+        setPrevSessionState(stateContext.state?.session?.status);
+    }, [stateContext.state?.session?.status]);
 
     return (
         <div className="container is-flex is-flex-direction-column h-96vh">
-            <div className="content has-text-centered">
-                <div id="circle"></div>
-                <div id="rectangle"></div>
+            <div className="content has-text-centered mt-4">
+                <h1 id="recycleTitle" className="mt-6">Бутилка</h1>
+                <h1 id="recycleTDuration" className="mb-0">Продължителност:</h1>
+                <div id="recycleTimer">{formatTime(timeLeft)}</div>
+            
+                <img 
+                    id="recycleBottle" 
+                    alt="Recycle bottle"
+                    src={imgSoftDrink} 
+                />
+                
+                <div id="recycleNumberOfEnteredItems">
+                    <span className="x">X</span>
+                    <span id="recycleCount" className="ml-4">{stateContext.state !== null && stateContext.state.session.items}</span>
+                </div>               
+                
+                <h2 id="recycleIncorrectItem" className="has-text-centered">Неразпознат обект!<br />Опитайте отново.</h2>
+                
+                <img id="recycleImgSuccess" src={imgSuccess} alt="Success"/>            
+                <h2 id="recycleTextSuccess" className="has-text-centered">Успешно рециклирани бутилки</h2>
 
-                <img id="imgWaterBottleBig" src={imgWaterBottleBig} alt="Big bottle of water"/>
-                <img id="imgSuccess" src={imgSuccess} alt="Success"/>
-                <img id="imgError" src={imgError} alt="Error"/>
-            </div>
-            <div className="content has-text-centered mt-auto pb-6">
-                {
-                    stateContext.state !== null
-                    ? <h1>
-                        {
-                            'NOT_INSERTED' === stateContext.state.object_recognition_state
-                            && <>Вкарай пластмасова бутилка</>
-                        }
-
-                        {
-                            'INSERTED' === stateContext.state.object_recognition_state
-                            && <>Разпознаване на обекта...</>
-                        }
-
-                        {
-                            'CORRECT_OBJECT' === stateContext.state.object_recognition_state
-                            && <>Благодаря!</>
-                        }
-
-                        {
-                            'INCORRECT_OBJECT' === stateContext.state.object_recognition_state
-                            && <>Обектът не е разпознат. Опитайте с друга бутилка.</>
-                        }
-                    </h1>
-                    : <></>
-                }
-            </div>
+                <button id="recycleStartButton" onClick={handleStart}>СТАРТ</button>
+                <button id="recycleStopButton" onClick={handleStop}>СПРИ</button>
+            </div>        
         </div>
     );
 }
