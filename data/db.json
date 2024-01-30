@@ -1,25 +1,44 @@
 {
   "state": {
-    "message": "Veni, vidi, redivivi.",
-    "goal_of_collected_items": 20000,
-    "eco_influence": {
-        "amount": 252,
-        "unit": "kWh"
-    },
+    "target": 20000,
     "collected": {
       "items": 15000,
-      "weight": {
-          "amount": 421.66,
-          "unit": "кг."
-      },
       "finances": {
-          "amount": 308.21,
-          "unit": "лв."
+        "amount": 5023.9,
+        "unit": "лв."
+      },
+      "weight": {
+        "amount": 6300.3,
+        "unit": "кг."
       }
     },
-    "volume_occupied": 45,
-    "object_recognition_state": "NOT_INSERTED"
+    "eco_influence": {
+      "energy": {
+        "amount": 738,
+        "unit": "MWh"
+      },
+      "cotwo": {
+        "amount": 15007.5,
+        "unit": "кг."
+      }
+    },
+    "is_connected": true,
+    "error": {
+      "status": true,
+      "message": "Error happened!"
+    },
+    "session": {
+      "status": "ON_HOLD",
+      "items": 2,
+      "finances": {
+        "amount": 308.21,
+        "unit": "лв."
+      }
+    }
   },
+  "start": [],
+  "stop": [],
+  "auth": [],
   "reboot": {},
   "shutdown": {}
 }

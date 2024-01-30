@@ -1,5 +1,8 @@
 {
     "/state": "/state",
+    "/start": "/start",
+    "/stop": "/stop",
+    "/auth": "/auth",
     "/reboot": "/reboot",
     "/shutdown": "/shutdown"
 }
