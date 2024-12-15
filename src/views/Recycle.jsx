@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 import { useApi } from '../hooks';
 import { useStateContext } from '../context';
@@ -29,18 +29,18 @@ const Recycle = () => {
     function handleStart() {
         api.start();
     }
-
-    function handleStop() {
+    
+    const handleStop = useCallback(() => {
         api.stop().then(response => {
             if (response.ok) {
                 stopCountdown();
             } else {
-                
+                // Handle error
             }
         });
-    }
+    }, [api]);
 
-    function startCountdown() {    
+    const startCountdown = useCallback(() => {    
         setTimeLeft(sessionDuraction);
     
         const intervalId = setInterval(() => {            
@@ -54,15 +54,16 @@ const Recycle = () => {
                 return prevCountDown - 1;
             });
         }, 1000);
-
+    
         intervalRef.current = intervalId;
-    }    
+    }, [sessionDuraction, handleStop]);
+    
 
     function stopCountdown() {
         clearInterval(intervalRef.current);
     }
 
-    useEffect(() => {        
+    useEffect(() => {  
         if (
             prevSessionState !== "INCORRECT_OBJECT" 
             && 
@@ -73,7 +74,7 @@ const Recycle = () => {
         }
 
         setPrevSessionState(stateContext.state?.session?.status);
-    }, [stateContext.state?.session?.status]);
+    }, [prevSessionState, stateContext.state?.session?.status, startCountdown]);
 
     return (
         <div className="container is-flex is-flex-direction-column h-96vh">

@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, useContext } from "react";
+import { createContext, useState, useEffect, useContext, useCallback } from "react";
 
 import { useApi } from '../hooks';
 
@@ -13,16 +13,16 @@ const StateContextProvider = ({children}) => {
     const [sessionItems, setSessionItems] = useState(0);
     const [prevSessionState, setPrevSessionState] = useState('ON_HOLD');
 
-    function percentageToDegrees(percentage) {
+    const percentageToDegrees = useCallback((percentage) => {
         return (180 * percentage) / 100;
-    }
+    }, []);
 
-    function rotateTheMeter(remaining_in_degree) {
+    const rotateTheMeter = useCallback((remaining_in_degree) => {
         const element = document.getElementById("rotating-element");
         if (element !== null) {
             element.style.transform = `rotate(${remaining_in_degree}deg)`;
         }
-    }
+    }, []);
 
     function rotateTheMeterHand(remaining_in_degree) {
         const element = document.getElementById("meter-hand");
@@ -31,50 +31,50 @@ const StateContextProvider = ({children}) => {
         }
     }
 
-    function formatNumberWithSpace(number) {
+    const formatNumberWithSpace = useCallback((number) => {
         return number.toLocaleString('en-US', {
             minimumFractionDigits: 2,
             useGrouping: true,
         }).replace(',', ' ');
-    }
+    }, []);
 
-    async function getState() {
+    const getState = useCallback(async () => {
         if (isGetStatePending) return;
-
+        
         setIsGetStatePending(true);
         await api.getState().then(response => {
             setIsGetStatePending(false);
-
+            
             if (response.ok) {
                 let data = response.data;
-
+                
                 // Calculate remaining
                 let remaining = data.target - data.collected.items;
                 let remaining_in_percentage = 100 - (remaining * 100 / data.target);
                 let remaining_in_degree = percentageToDegrees(remaining_in_percentage);
-
+                                
                 data['remaining'] = remaining.toLocaleString('fr-FR').replace(/,/g, ' ');
                 data['remaining_in_percentage'] = remaining_in_percentage.toFixed(2);
-
+                
                 // Format numbers                
                 data.collected.items = data.collected.items.toLocaleString('fr-FR').replace(/,/g, ' ');
                 data.collected.weight.amount = formatNumberWithSpace(data.collected.weight.amount);
                 data.collected.finances.amount = formatNumberWithSpace(data.collected.finances.amount);
                 data.eco_influence.cotwo.amount = formatNumberWithSpace(data.eco_influence.cotwo.amount);
                 data.eco_influence.energy.amount = formatNumberWithSpace(data.eco_influence.energy.amount);
-
+                
                 // Actions related to the meter
                 rotateTheMeter(remaining_in_degree);
                 //rotateTheMeterHand(remaining_in_degree);
-
+                
                 // Recycling
                 setSessionItems(data.session.items);
-                setSessionState(data.session.status)
+                setSessionState(data.session.status);
 
                 setState(data);
             }
         });
-    };
+    }, [api, isGetStatePending, percentageToDegrees, formatNumberWithSpace, rotateTheMeter]);
 
     useEffect(() => {
         const elementRecycleTitle = document.getElementById("recycleTitle");
@@ -209,7 +209,7 @@ const StateContextProvider = ({children}) => {
         }        
 
         setPrevSessionState(sessionState);
-    }, [sessionState]);
+    }, [prevSessionState, sessionItems, sessionState]);
 
 
     useEffect(() => {
@@ -220,7 +220,7 @@ const StateContextProvider = ({children}) => {
         }, timeoutInterval);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [getState]);
 
     return (
         <StateContext.Provider
