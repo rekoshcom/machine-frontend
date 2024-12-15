@@ -1,6 +1,6 @@
 # Installation
 
-Copy `.env.example` and create a new file `.env`, set the required parameters.
+Copy `.env.example` and create a new file `.env`, set the required parameters. In our case this is the URL pointing to the machine API.
 
 Next, run the following command to install all required packaghes:
 
@@ -8,26 +8,13 @@ Next, run the following command to install all required packaghes:
 npm install
 ```
 
-For your information, if you'd like to start a new React project you'll have to
-run:
-
-```
-npx create-react-app .
-```
-
-in the directory where you'd like to initialise a React app.
-
 # Run
 
 In the project directory, you can run:
 
-## `npm start`
+## Development
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Run test API
 
 To run the test API:
 
@@ -35,12 +22,26 @@ To run the test API:
 npm run json-server
 ```
 
-## `npm test`
+Otherwise, please run the local python API before running the React application.
+
+### `npm start` in dev mode
+
+This is the mode used to run the application when we develop and change the code!
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## `npm run build`
+## Production
+
+### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -50,7 +51,15 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## `npm run eject`
+### Run the app on production server
+
+After the development is ready and you have built the project, use the command below to run the application:
+
+```
+serve -s build
+```
+
+### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
