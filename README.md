@@ -1,3 +1,58 @@
+# A step-by-step guide how to run the application
+
+1. Download the most recent version of the code on your local machine.
+2. Transfer the code to ReKosh.
+3. Access ReKosh Rasberry Pi via two terminals.
+4. In the first terminal type the following command:
+
+```
+npm run json-server
+```
+
+This command will run a fake Flask API. That is used only when we want to simulate the Flask API!
+
+5. If you run the fake API, look at the terminal. You should see something like this:
+
+```
+  Resources
+  http://localhost:3001/state
+  http://localhost:3001/start
+  http://localhost:3001/stop
+  http://localhost:3001/auth
+  http://localhost:3001/reboot
+  http://localhost:3001/shutdown
+
+  Other routes
+  /state -> /state
+  /start -> /start
+  /stop -> /stop
+  /auth -> /auth
+  /reboot -> /reboot
+  /shutdown -> /shutdown
+
+  Home
+  http://localhost:3001
+```
+
+6. Copy the last URL which in our case is `http://localhost:3001`. If you use the real API, simply get the URL of the real Flask API.
+7. In the second terminal, open .env file and set the URL of the API. Save and close!
+8. Next, run these:
+
+```
+npm install
+npm run build
+```
+
+These commands will install all missing dependencies and build the React app ready for deployment.
+
+9. Finally, run this command to start the application:
+
+```
+serve -s build
+```
+
+This command does what it says. It will serve the build in the web browser installed on the ReKosh machine.
+
 # Installation
 
 Copy `.env.example` and create a new file `.env`, set the required parameters. In our case this is the URL pointing to the machine API.
