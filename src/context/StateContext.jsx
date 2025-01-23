@@ -79,8 +79,8 @@ const StateContextProvider = ({children}) => {
     useEffect(() => {
         const elementRecycleTitle = document.getElementById("recycleTitle");
 
-        const elementRecycleTDuration = document.getElementById("recycleTDuration");
-        const elementRecycleTimer = document.getElementById("recycleTimer");
+        // const elementRecycleTDuration = document.getElementById("recycleTDuration");
+        // const elementRecycleTimer = document.getElementById("recycleTimer");
 
         const elementRecycleBottle = document.getElementById("recycleBottle");
 
@@ -90,13 +90,13 @@ const StateContextProvider = ({children}) => {
         const elementRecycleImgSuccess = document.getElementById("recycleImgSuccess");        
         const elementRecycleTextSuccess = document.getElementById("recycleTextSuccess");
 
-        const elementRecycleStartButton = document.getElementById("recycleStartButton");
+        // const elementRecycleStartButton = document.getElementById("recycleStartButton");
         const elementRecycleStopButton = document.getElementById("recycleStopButton");
 
         function setInProgress() {
             elementRecycleTitle.style.display = 'none';
-            elementRecycleTDuration.style.display = 'block';
-            elementRecycleTimer.style.display = 'block';
+            // elementRecycleTDuration.style.display = 'block';
+            // elementRecycleTimer.style.display = 'block';
             
             elementRecycleBottle.style.display = 'block';
             elementRecycleBottle.style.width = `80px`;
@@ -111,14 +111,14 @@ const StateContextProvider = ({children}) => {
             elementRecycleImgSuccess.style.display = 'none';
 
             elementRecycleTextSuccess.style.display = 'none';            
-            elementRecycleStartButton.style.display = 'none';
+            // elementRecycleStartButton.style.display = 'none';
             elementRecycleStopButton.style.display = 'block';
         }
 
         function setIncorrectObject() {
             elementRecycleTitle.style.display = 'none';
-            elementRecycleTDuration.style.display = 'block';
-            elementRecycleTimer.style.display = 'block';
+            // elementRecycleTDuration.style.display = 'block';
+            // elementRecycleTimer.style.display = 'block';
             
             elementRecycleBottle.style.display = 'block';
             elementRecycleBottle.style.width = `80px`;
@@ -133,14 +133,14 @@ const StateContextProvider = ({children}) => {
             elementRecycleImgSuccess.style.display = 'none';
 
             elementRecycleTextSuccess.style.display = 'none';            
-            elementRecycleStartButton.style.display = 'none';
+            // elementRecycleStartButton.style.display = 'none';
             elementRecycleStopButton.style.display = 'block';
         }
 
         function setSuccess() {
             elementRecycleTitle.style.display = 'none';
-            elementRecycleTDuration.style.display = 'none';
-            elementRecycleTimer.style.display = 'none';
+            // elementRecycleTDuration.style.display = 'none';
+            // elementRecycleTimer.style.display = 'none';
             
             elementRecycleBottle.style.display = 'none';
             elementRecycleBottle.style.width = `140px`;
@@ -155,14 +155,14 @@ const StateContextProvider = ({children}) => {
             elementRecycleImgSuccess.style.display = 'block';
 
             elementRecycleTextSuccess.style.display = 'block';                
-            elementRecycleStartButton.style.display = 'none';
+            // elementRecycleStartButton.style.display = 'none';
             elementRecycleStopButton.style.display = 'none';
         }
 
         function setOnHold() {
             elementRecycleTitle.style.display = 'block';
-            elementRecycleTDuration.style.display = 'none';
-            elementRecycleTimer.style.display = 'none';
+            // elementRecycleTDuration.style.display = 'none';
+            // elementRecycleTimer.style.display = 'none';
             
             elementRecycleBottle.style.display = 'block';
             elementRecycleBottle.style.width = `140px`;
@@ -177,7 +177,7 @@ const StateContextProvider = ({children}) => {
             elementRecycleImgSuccess.style.display = 'none';
 
             elementRecycleTextSuccess.style.display = 'none';                
-            elementRecycleStartButton.style.display = 'block';
+            // elementRecycleStartButton.style.display = 'block';
             elementRecycleStopButton.style.display = 'none';
         }
 
