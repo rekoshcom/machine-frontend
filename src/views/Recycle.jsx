@@ -64,14 +64,14 @@ const Recycle = () => {
     }
 
     useEffect(() => {  
-        if (
-            prevSessionState !== "INCORRECT_OBJECT" 
-            && 
-            stateContext.state?.session?.status === "IN_PROGRESS"
-        )
-        {            
-            startCountdown();        
-        }
+        // if (
+        //     prevSessionState !== "INCORRECT_OBJECT" 
+        //     && 
+        //     stateContext.state?.session?.status === "IN_PROGRESS"
+        // )
+        // {            
+        //     startCountdown();        
+        // }
 
         setPrevSessionState(stateContext.state?.session?.status);
     }, [prevSessionState, stateContext.state?.session?.status, startCountdown]);
@@ -79,9 +79,9 @@ const Recycle = () => {
     return (
         <div className="container is-flex is-flex-direction-column h-96vh">
             <div className="content has-text-centered mt-4">
-                <h1 id="recycleTitle" className="mt-6">Бутилка</h1>
-                <h1 id="recycleTDuration" className="mb-0">Продължителност:</h1>
-                <div id="recycleTimer">{formatTime(timeLeft)}</div>
+                <h1 id="recycleTitle" className="mt-6">PET Бутилка</h1>
+                {/* <h1 id="recycleTDuration" className="mb-0">Продължителност:</h1> */}
+                {/* <div id="recycleTimer">{formatTime(timeLeft)}</div> */}
             
                 <img 
                     id="recycleBottle" 
@@ -97,9 +97,9 @@ const Recycle = () => {
                 <h2 id="recycleIncorrectItem" className="has-text-centered">Неразпознат обект!<br />Опитайте отново.</h2>
                 
                 <img id="recycleImgSuccess" src={imgSuccess} alt="Success"/>            
-                <h2 id="recycleTextSuccess" className="has-text-centered">Успешно рециклирани бутилки</h2>
+                <h2 id="recycleTextSuccess" className=" has-text-centered">Успешно рециклирани бутилки</h2>
 
-                <button id="recycleStartButton" onClick={handleStart}>СТАРТ</button>
+                {/* <button id="recycleStartButton" onClick={handleStart}>СТАРТ</button> */}
                 <button id="recycleStopButton" onClick={handleStop}>СПРИ</button>
             </div>        
         </div>
