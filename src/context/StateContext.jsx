@@ -213,7 +213,7 @@ const StateContextProvider = ({children}) => {
 
 
     useEffect(() => {
-        const timeoutInterval = 500;
+        const timeoutInterval = 100;
 
         const interval = setInterval(() => {
             getState();
