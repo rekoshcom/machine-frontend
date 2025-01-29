@@ -11,6 +11,7 @@ const StateContextProvider = ({children}) => {
 
     const [sessionState, setSessionState] = useState('ON_HOLD');
     const [sessionItems, setSessionItems] = useState(0);
+    const [sessionCurrentObjectType, setSessionCurrentObjectType] = useState('');
     const [prevSessionState, setPrevSessionState] = useState('ON_HOLD');
 
     const percentageToDegrees = useCallback((percentage) => {
@@ -69,6 +70,7 @@ const StateContextProvider = ({children}) => {
                 
                 // Recycling
                 setSessionItems(data.session.items);
+                setSessionCurrentObjectType(data.session.current_object_type);
                 setSessionState(data.session.status);
 
                 setState(data);
@@ -86,6 +88,7 @@ const StateContextProvider = ({children}) => {
 
         const elementRecycleNumberOfEnteredItems = document.getElementById("recycleNumberOfEnteredItems");
         const elementRecycleIncorrectItem = document.getElementById("recycleIncorrectItem");        
+        const elementRecycleIncorrectItemType = document.getElementById("recycleIncorrectItemType");
 
         const elementRecycleImgSuccess = document.getElementById("recycleImgSuccess");        
         const elementRecycleTextSuccess = document.getElementById("recycleTextSuccess");
@@ -101,7 +104,7 @@ const StateContextProvider = ({children}) => {
             elementRecycleBottle.style.display = 'block';
             elementRecycleBottle.style.width = `80px`;
             elementRecycleBottle.style.transform = `rotate(0deg)`;
-            elementRecycleBottle.style.top = `33%`;
+            elementRecycleBottle.style.top = `26%`;
             elementRecycleBottle.style.left = `27%`;
 
             elementRecycleIncorrectItem.style.display = 'none';
@@ -115,7 +118,7 @@ const StateContextProvider = ({children}) => {
             elementRecycleStopButton.style.display = 'block';
         }
 
-        function setIncorrectObject() {
+        function setIncorrectObject(sessionCurrentObjectType) {            
             elementRecycleTitle.style.display = 'none';
             // elementRecycleTDuration.style.display = 'block';
             // elementRecycleTimer.style.display = 'block';
@@ -123,10 +126,11 @@ const StateContextProvider = ({children}) => {
             elementRecycleBottle.style.display = 'block';
             elementRecycleBottle.style.width = `80px`;
             elementRecycleBottle.style.transform = `rotate(0deg)`;
-            elementRecycleBottle.style.top = `33%`;
+            elementRecycleBottle.style.top = `26%`;
             elementRecycleBottle.style.left = `27%`;
 
             elementRecycleIncorrectItem.style.display = 'block';
+            elementRecycleIncorrectItemType.innerHTML = sessionCurrentObjectType;
 
             elementRecycleNumberOfEnteredItems.style.display = 'block';                
             
@@ -199,7 +203,7 @@ const StateContextProvider = ({children}) => {
                     setInProgress();
                     break;                      
                 case 'INCORRECT_OBJECT':
-                    setIncorrectObject();
+                    setIncorrectObject(sessionCurrentObjectType);
                     break;
                 case 'ON_HOLD':
                 default:
@@ -209,7 +213,7 @@ const StateContextProvider = ({children}) => {
         }        
 
         setPrevSessionState(sessionState);
-    }, [prevSessionState, sessionItems, sessionState]);
+    }, [prevSessionState, sessionItems, sessionState, sessionCurrentObjectType]);
 
 
     useEffect(() => {
