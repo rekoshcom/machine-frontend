@@ -30,6 +30,7 @@
     "session": {
       "status": "ON_HOLD",
       "items": 2,
+      "current_object_type": "Кен",
       "finances": {
         "amount": 308.21,
         "unit": "лв."
