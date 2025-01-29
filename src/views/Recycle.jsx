@@ -94,7 +94,8 @@ const Recycle = () => {
                     <span id="recycleCount" className="ml-4">{stateContext.state !== null && stateContext.state.session.items}</span>
                 </div>               
                 
-                <h2 id="recycleIncorrectItem" className="has-text-centered">Машината не приема опаковки от типа<br /><span id="recycleIncorrectItemType"></span></h2>
+                {/* <h2 id="recycleIncorrectItem" className="has-text-centered">Машината не приема опаковки от типа<br /><span id="recycleIncorrectItemType"></span></h2> */}
+                <h2 id="recycleIncorrectItem" className="has-text-centered">Машината не приема този тип опаковки.</h2>
                 
                 <img id="recycleImgSuccess" src={imgSuccess} alt="Success"/>            
                 <h2 id="recycleTextSuccess" className=" has-text-centered">Успешно рециклирани бутилки</h2>

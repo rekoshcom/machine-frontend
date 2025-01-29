@@ -88,7 +88,7 @@ const StateContextProvider = ({children}) => {
 
         const elementRecycleNumberOfEnteredItems = document.getElementById("recycleNumberOfEnteredItems");
         const elementRecycleIncorrectItem = document.getElementById("recycleIncorrectItem");        
-        const elementRecycleIncorrectItemType = document.getElementById("recycleIncorrectItemType");
+        // const elementRecycleIncorrectItemType = document.getElementById("recycleIncorrectItemType");
 
         const elementRecycleImgSuccess = document.getElementById("recycleImgSuccess");        
         const elementRecycleTextSuccess = document.getElementById("recycleTextSuccess");
@@ -130,7 +130,7 @@ const StateContextProvider = ({children}) => {
             elementRecycleBottle.style.left = `27%`;
 
             elementRecycleIncorrectItem.style.display = 'block';
-            elementRecycleIncorrectItemType.innerHTML = sessionCurrentObjectType;
+            // elementRecycleIncorrectItemType.innerHTML = sessionCurrentObjectType;
 
             elementRecycleNumberOfEnteredItems.style.display = 'block';                
             
