@@ -29,6 +29,16 @@ const useApi = () => {
     };
 
     const _get_error_response = (response) => {
+        if (response === undefined || response === null) {
+            return {
+                'error': {
+                    'message': authTranslations['UNEXPECTED_ERROR'],
+                    'code': 'UNEXPECTED_ERROR'
+                },
+                'ok': false
+            }
+        }
+        
         const data = response.data
 
         if (data === undefined || (data !== undefined && (
